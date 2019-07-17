@@ -1,5 +1,6 @@
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   entry: {
@@ -7,9 +8,12 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: __dirname + '/dist/front-end'
+    path: path.resolve(__dirname, 'dist', 'front-end')
   },
   devtool: 'inline-source.map',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
   module: {
     rules: [
       {
