@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <AppHeader text="Hola Mundo" />
+        <AppHeader text="Curso de JavaScript" />
       </div>
     )
   }
