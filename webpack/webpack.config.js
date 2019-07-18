@@ -55,7 +55,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: 'client/index.html',
+      template: path.resolve(__dirname, '..', 'client', 'index.html'),
     }),
   ],
   /* Dev server config */
