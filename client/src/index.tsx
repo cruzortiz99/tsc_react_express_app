@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader'
 import AppMenu, { AppMenuProps } from './components/AppMenu'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Introduction from './views/Introduction'
+import './css/main.css'
 
 interface AppState {
   menu: AppMenuProps

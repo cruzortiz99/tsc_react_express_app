@@ -29,7 +29,11 @@ Typescript React Express FullStack App
        // Adding webpack and dev server to the project
        "webpack": "^4.36.1",
        "webpack-cli": "^3.3.6",
-       "webpack-dev-server": "^3.7.2"
+       "webpack-dev-server": "^3.7.2",
+       // Loaders for the style and css files
+       "css-loader": "^3.1.0",
+       "style-loader": "^0.23.1",
+
      }
    ...
    ```
@@ -40,17 +44,17 @@ Typescript React Express FullStack App
    module.exports = {
      /* Entry point for the ui */
      entry: {
-       main: path.resolve(__dirname, '..', 'client', 'src', 'index.tsx'),
+       main: path.resolve(__dirname, '..', 'client', 'src', 'index.tsx')
      },
      /* Output point of the ui bundle */
      output: {
        filename: '[name].js',
-       path: path.resolve(__dirname, 'dist', 'client'),
+       path: path.resolve(__dirname, 'dist', 'client')
      },
      devtool: 'inline-source.map',
      /* Require to make imports */
      resolve: {
-       extensions: ['.ts', '.tsx', '.js'],
+       extensions: ['.ts', '.tsx', '.js']
      },
      module: {
        rules: [
@@ -58,31 +62,31 @@ Typescript React Express FullStack App
            /* Handles js files */
            test: /\.(js)$/,
            exclude: /node_modules/,
-           use: ['babel-loader'],
+           use: ['babel-loader']
          },
          {
            /* Handles ts and tsx files */
            test: /\.(tsx*)$/,
            use: {
-             loader: 'awesome-typescript-loader',
-           },
+             loader: 'awesome-typescript-loader'
+           }
          },
          {
            /* Handles CSS files */
            test: /\.css$/,
            use: [
              {
-               loader: 'style-loader',
+               loader: 'style-loader'
              },
              {
                loader: 'css-loader',
                options: {
-                 sourceMap: true,
-               },
-             },
-           ],
-         },
-       ],
+                 sourceMap: true
+               }
+             }
+           ]
+         }
+       ]
      },
      /* Plugins for webpack */
      plugins: [
@@ -91,8 +95,8 @@ Typescript React Express FullStack App
        new webpack.NoEmitOnErrorsPlugin(),
        new HtmlWebpackPlugin({
          /* Needs to exists*/
-         template: path.resolve(__dirname, '..', 'client', 'index.html'),
-       }),
+         template: path.resolve(__dirname, '..', 'client', 'index.html')
+       })
      ],
      /* Dev server config */
      devServer: {
@@ -100,8 +104,8 @@ Typescript React Express FullStack App
        port: 3000,
        historyApiFallback: true,
        open: true,
-       hot: true,
-     },
+       hot: true
+     }
    }
    ```
 
