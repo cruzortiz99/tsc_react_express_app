@@ -1,5 +1,6 @@
 import React from 'react'
 import AppMenuItem, { AppMenuItemProps } from './AppMenuItem'
+import AppHeader, { AppHeaderProps } from './AppHeader'
 
 export interface AppMenuClassificationProps {
   name: string
@@ -12,7 +13,7 @@ const AppMenuClassification = (props: AppMenuClassificationProps) => {
   })
   return (
     <div>
-      <h3>{props.name}</h3>
+      <AppHeader text={props.name} level={3} />
       <ul>{items}</ul>
     </div>
   )
