@@ -4,17 +4,23 @@ import AppContentTheory from './AppContentTheory'
 import AppContentCode from './AppContentCode'
 export interface AppContentStructureProps {
   title: string
-  code?: string
-  children?: ReactNode
+  example?: ReactNode
+  paragraphs?: ReactNode
+  code?: ReactNode
 }
 const AppContentStructure = (props: AppContentStructureProps) => {
-  let code = props.code ? <AppContentCode code={props.code} /> : undefined
   return (
     <div>
       <div>
-        <AppContentExample>{props.children}</AppContentExample>
-        <AppContentTheory title={props.title} />
-        {code}
+        <AppContentExample>{props.example}</AppContentExample>
+      </div>
+      <div>
+        <AppContentTheory title={props.title}>
+          {props.paragraphs}
+        </AppContentTheory>
+      </div>
+      <div>
+        <AppContentCode>{props.code}</AppContentCode>
       </div>
     </div>
   )

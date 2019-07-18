@@ -6,9 +6,9 @@ export interface AppContentExampleProps {
 
 const AppContentExample = (props: AppContentExampleProps) => {
   return (
-    <div>
+    <React.Fragment>
       <div>{props.children}</div>
-    </div>
+    </React.Fragment>
   )
 }
 

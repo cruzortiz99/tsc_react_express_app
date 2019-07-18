@@ -34,13 +34,15 @@ class App extends React.Component<{}, AppState> {
 
   render() {
     return (
-      <div>
-        <AppHeader text="Curso de JavaScript" />
+      <React.Fragment>
+        <div>
+          <AppHeader text="Curso de JavaScript" />
+        </div>
         <Router>
           <AppMenu options={this.state.menu.options} />
           <Route exact path="/(introduction)*" component={Introduction} />
         </Router>
-      </div>
+      </React.Fragment>
     )
   }
 }

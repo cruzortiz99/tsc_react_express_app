@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 export interface AppContentCodeProps {
-  code: string
+  children?: ReactNode
 }
 const AppContentCode = (props: AppContentCodeProps) => {
-  return (
-    <pre>
-      <code>{props.code}</code>
-    </pre>
-  )
+  if (props.children) {
+    return (
+      <pre>
+        <code>{props.children}</code>
+      </pre>
+    )
+  }
+  return <React.Fragment />
 }
 export default AppContentCode
