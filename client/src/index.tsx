@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import AppHeader from './components/AppHeader'
 import AppMenu, { AppMenuProps } from './components/AppMenu'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Introduction from './views/Introduction'
 
 interface AppState {
   menu: AppMenuProps
@@ -37,6 +38,7 @@ class App extends React.Component<{}, AppState> {
         <AppHeader text="Curso de JavaScript" />
         <Router>
           <AppMenu options={this.state.menu.options} />
+          <Route exact path="/(introduction)*" component={Introduction} />
         </Router>
       </div>
     )

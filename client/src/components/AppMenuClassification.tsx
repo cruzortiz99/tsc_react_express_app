@@ -12,10 +12,10 @@ const AppMenuClassification = (props: AppMenuClassificationProps) => {
     return <AppMenuItem link={item.link} name={item.name} key={key} />
   })
   return (
-    <div>
+    <React.Fragment>
       <AppHeader text={props.name} level={3} />
       <ul>{items}</ul>
-    </div>
+    </React.Fragment>
   )
 }
 
