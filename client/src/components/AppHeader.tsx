@@ -1,5 +1,5 @@
 import React from 'react'
-type AppHeaderProps = {
+export interface AppHeaderProps {
   text: string | number
 }
 const AppHeader = (props: AppHeaderProps) => <h1>{props.text}</h1>

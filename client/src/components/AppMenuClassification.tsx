@@ -1,7 +1,7 @@
 import React from 'react'
 import AppMenuItem, { AppMenuItemProps } from './AppMenuItem'
 
-export type AppMenuClassificationProps = {
+export interface AppMenuClassificationProps {
   name: string
   children: Array<AppMenuItemProps>
 }

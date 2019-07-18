@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export type AppMenuItemProps = {
+export interface AppMenuItemProps {
   link: string
   name: string
 }

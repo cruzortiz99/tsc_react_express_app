@@ -1,10 +1,10 @@
 import React, { Children } from 'react'
 import { AppMenuItemProps } from './AppMenuItem'
 import AppMenuClassification, {
-  AppMenuClassificationProps
+  AppMenuClassificationProps,
 } from './AppMenuClassification'
 
-type AppMenuProps = {
+export interface AppMenuProps {
   options: Array<AppMenuClassificationProps>
 }
 
@@ -20,3 +20,4 @@ const AppMenu = (props: AppMenuProps) => {
   })
   return <div>{classification}</div>
 }
+export default AppMenu
