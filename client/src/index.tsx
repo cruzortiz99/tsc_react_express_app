@@ -4,27 +4,31 @@ import AppHeader from './components/AppHeader'
 import AppMenu, { AppMenuProps } from './components/AppMenu'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-const menu: AppMenuProps = {
-  options: [
-    {
-      name: 'JavaScript',
-      children: [
-        {
-          link: '/introduction',
-          name: 'Introduction'
-        },
-        {
-          link: '/syntax',
-          name: 'Syntax'
-        }
-      ]
-    }
-  ]
+interface AppState {
+  menu: AppMenuProps
 }
-
-class App extends React.Component {
+class App extends React.Component<{}, AppState> {
   constructor(props = {}) {
     super(props)
+    this.state = {
+      menu: {
+        options: [
+          {
+            name: 'JavaScript',
+            children: [
+              {
+                link: '/introduction',
+                name: 'Introduction'
+              },
+              {
+                link: '/syntax',
+                name: 'Syntax'
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 
   render() {
@@ -32,7 +36,7 @@ class App extends React.Component {
       <div>
         <AppHeader text="Curso de JavaScript" />
         <Router>
-          <AppMenu options={menu.options} />
+          <AppMenu options={this.state.menu.options} />
         </Router>
       </div>
     )
