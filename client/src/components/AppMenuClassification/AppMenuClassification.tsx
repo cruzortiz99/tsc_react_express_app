@@ -1,6 +1,6 @@
 import React from 'react'
-import AppMenuItem, { AppMenuItemProps } from './AppMenuItem'
-import AppHeader, { AppHeaderProps } from './AppHeader'
+import AppMenuItem, { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
+import AppHeader, { AppHeaderProps } from '../AppHeader/AppHeader'
 
 export interface AppMenuClassificationProps {
   name?: string

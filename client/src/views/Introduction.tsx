@@ -1,5 +1,5 @@
 import React from 'react'
-import AppContentStructure from '../components/AppContentStructure'
+import AppContentStructure from '../components/AppContentStructure/AppContentStructure'
 
 const Introduction = () => {
   let title = 'Introducción'

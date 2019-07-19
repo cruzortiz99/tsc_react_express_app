@@ -1,9 +1,9 @@
 import React, { Children } from 'react'
-import { AppMenuItemProps } from './AppMenuItem'
+import { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
 import AppMenuClassification, {
   AppMenuClassificationProps
-} from './AppMenuClassification'
-import AppHeader from './AppHeader'
+} from '../AppMenuClassification/AppMenuClassification'
+import AppHeader from '../AppHeader/AppHeader'
 
 export interface AppMenuProps {
   options: Array<AppMenuClassificationProps>
