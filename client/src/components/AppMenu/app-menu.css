@@ -1,7 +1,7 @@
 .sidebar {
   grid-area: pg-sd-bar;
   display: grid;
-  grid-template-rows: 10vh auto;
+  grid-template-rows: minmax(min-content, 10vh) auto;
   height: 100vh;
   overflow-y: auto;
   box-shadow: var(--menu-shadow);
