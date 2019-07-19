@@ -39,14 +39,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 .app-menu {
   grid-area: pg-menu;
   background-color: var(--menu-color);
   box-shadow: var(--menu-shadow);
+  z-index: 2;
 }
 .app-content {
   grid-area: pg-content;
   background-color: var(--page-content-color);
   overflow-y: auto;
+  z-index: 1;
+  padding: 15px;
 }

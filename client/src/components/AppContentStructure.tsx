@@ -10,7 +10,7 @@ export interface AppContentStructureProps {
 }
 const AppContentStructure = (props: AppContentStructureProps) => {
   return (
-    <div>
+    <div className="app-content">
       <div>
         <AppContentExample>{props.example}</AppContentExample>
       </div>
