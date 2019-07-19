@@ -1,8 +1,9 @@
 import React, { Children } from 'react'
 import { AppMenuItemProps } from './AppMenuItem'
 import AppMenuClassification, {
-  AppMenuClassificationProps,
+  AppMenuClassificationProps
 } from './AppMenuClassification'
+import AppHeader from './AppHeader'
 
 export interface AppMenuProps {
   options: Array<AppMenuClassificationProps>
@@ -18,6 +19,13 @@ const AppMenu = (props: AppMenuProps) => {
       />
     )
   })
-  return <div className="app-menu">{classification}</div>
+  return (
+    <div className="sidebar">
+      <div className="app-header">
+        <AppHeader text="JavaScript" />
+      </div>
+      <div className="app-menu">{classification}</div>
+    </div>
+  )
 }
 export default AppMenu
