@@ -1,0 +1,52 @@
+:root {
+  --brand-color: gold;
+  --menu-color: rgba(255, 217, 0, 0.5);
+  --page-content-color: lightyellow;
+  --brand-shadow: gray 0px 2px 4px;
+  --menu-shadow: gray 2px 1px 4px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+::-webkit-scrollbar-track {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+#app {
+  display: grid;
+  grid-template-areas:
+    'pg-header pg-header'
+    'pg-menu pg-content';
+  grid-template-columns: minmax(10vw, 200px) auto;
+  grid-template-rows: 10vh auto;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.app-header {
+  grid-area: pg-header;
+  background-color: var(--brand-color);
+  box-shadow: var(--brand-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-menu {
+  grid-area: pg-menu;
+  background-color: var(--menu-color);
+  box-shadow: var(--menu-shadow);
+}
+.app-content {
+  grid-area: pg-content;
+  background-color: var(--page-content-color);
+  overflow-y: auto;
+}

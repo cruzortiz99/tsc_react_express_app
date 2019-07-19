@@ -18,6 +18,6 @@ const AppMenu = (props: AppMenuProps) => {
       />
     )
   })
-  return <div>{classification}</div>
+  return <div className="app-menu">{classification}</div>
 }
 export default AppMenu

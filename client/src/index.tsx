@@ -36,7 +36,7 @@ class App extends React.Component<{}, AppState> {
   render() {
     return (
       <React.Fragment>
-        <div>
+        <div className="app-header">
           <AppHeader text="Curso de JavaScript" />
         </div>
         <Router>
