@@ -4,6 +4,7 @@ import AppMenuClassification, {
   AppMenuClassificationProps
 } from '../AppMenuClassification/AppMenuClassification'
 import AppHeader from '../AppHeader/AppHeader'
+import './app-menu.css'
 
 export interface AppMenuProps {
   options: Array<AppMenuClassificationProps>

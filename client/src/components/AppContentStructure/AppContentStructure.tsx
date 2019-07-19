@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import AppContentExample from '../AppContentExample/AppContentExample'
 import AppContentTheory from '../AppContentTheory/AppContentTheory'
 import AppContentCode from '../AppContentCode/AppContentCode'
+import './app-content-structure.css'
 export interface AppContentStructureProps {
   title: string
   example?: ReactNode
