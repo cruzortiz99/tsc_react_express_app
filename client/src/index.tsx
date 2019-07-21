@@ -10,6 +10,7 @@ interface AppState {
   menu: AppMenuProps
 }
 const App = () => {
+  /* Using react hook to set the state of a functional component */
   let [options, setOptions] = useState([
     {
       name: 'básico',
