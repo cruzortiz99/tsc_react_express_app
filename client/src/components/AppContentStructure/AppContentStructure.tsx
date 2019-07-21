@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect } from 'react'
 import AppContentExample from '../AppContentExample/AppContentExample'
 import AppContentTheory from '../AppContentTheory/AppContentTheory'
 import AppContentCode from '../AppContentCode/AppContentCode'
@@ -10,6 +10,7 @@ export interface AppContentStructureProps {
   code?: ReactNode
 }
 const AppContentStructure = (props: AppContentStructureProps) => {
+  useEffect(() => {}, [false])
   return (
     <div className="app-content">
       <div>

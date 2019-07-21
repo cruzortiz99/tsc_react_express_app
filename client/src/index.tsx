@@ -14,7 +14,7 @@ const App = () => {
   let [options, setOptions] = useState([
     {
       name: 'básico',
-      children: [
+      topics: [
         {
           link: '/introduction',
           name: 'introduction'
@@ -63,11 +63,23 @@ const App = () => {
           link: '/loops',
           name: 'loops'
         }
+      ],
+      subclassifications: [
+        {
+          name: 'subclassification',
+          topics: [
+            {
+              name: 'algo',
+              link: '/algo'
+            }
+          ],
+          level: 4
+        }
       ]
     },
     {
       name: 'intermedio',
-      children: [
+      topics: [
         {
           link: '/events',
           name: 'events'
@@ -108,7 +120,7 @@ const App = () => {
     },
     {
       name: 'avanzado',
-      children: [
+      topics: [
         {
           link: '/reactjs',
           name: 'reactjs'

@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React, { useEffect } from 'react'
 import { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
 import AppMenuClassification, {
   AppMenuClassificationProps
@@ -15,11 +15,13 @@ const AppMenu = (props: AppMenuProps) => {
     return (
       <AppMenuClassification
         name={classification.name}
-        children={classification.children}
+        topics={classification.topics}
+        subclassifications={classification.subclassifications}
         key={key}
       />
     )
   })
+  useEffect(() => {}, [false])
   return (
     <div className="sidebar">
       <div className="app-header">

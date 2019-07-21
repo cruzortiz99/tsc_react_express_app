@@ -1,30 +1,49 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AppMenuItem, { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
-import AppHeader, { AppHeaderProps } from '../AppHeader/AppHeader'
+import AppHeader from '../AppHeader/AppHeader'
+import './app-menu-classifications.css'
+
+interface AppMenuSubclassificationProps
+  extends Array<AppMenuClassificationProps> {}
 
 export interface AppMenuClassificationProps {
   name?: string
-  children: Array<AppMenuItemProps>
+  level?: number
+  topics: Array<AppMenuItemProps>
+  subclassifications?: AppMenuSubclassificationProps
 }
 
 const AppMenuClassification = (props: AppMenuClassificationProps) => {
-  let items = props.children.map((item, key) => {
-    return <AppMenuItem link={item.link} name={item.name} key={key} />
+  let level = props.level || 3
+  let header = props.name ? (
+    <AppHeader text={props.name} level={level} />
+  ) : (
+    undefined
+  )
+  let items = props.topics.map((topic, key) => {
+    return <AppMenuItem name={topic.name} link={topic.link} key={key} />
   })
-  if (props.name) {
-    return (
-      <React.Fragment>
-        <AppHeader text={props.name} level={3} />
-        <ul>{items}</ul>
-      </React.Fragment>
-    )
-  } else {
-    return (
-      <React.Fragment>
-        <ul>{items}</ul>
-      </React.Fragment>
-    )
-  }
+  let subclassifications = props.subclassifications
+    ? props.subclassifications.map((subclassification, key) => {
+        return (
+          <AppMenuClassification
+            key={key}
+            topics={subclassification.topics}
+            name={subclassification.name}
+            subclassifications={subclassification.subclassifications}
+            level={subclassification.level}
+          />
+        )
+      })
+    : undefined
+  useEffect(() => {}, [false])
+  return (
+    <React.Fragment>
+      {header}
+      <ul className="subclassifications">{items}</ul>
+      <div className="subclassifications">{subclassifications}</div>
+    </React.Fragment>
+  )
 }
 
 export default AppMenuClassification
