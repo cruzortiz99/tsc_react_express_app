@@ -3,14 +3,11 @@ import AppMenuItem, { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
 import AppHeader from '../AppHeader/AppHeader'
 import './app-menu-classifications.css'
 
-interface AppMenuSubclassificationProps
-  extends Array<AppMenuClassificationProps> {}
-
 export interface AppMenuClassificationProps {
   name?: string
   level?: number
   topics: Array<AppMenuItemProps>
-  subclassifications?: AppMenuSubclassificationProps
+  subclassifications?: Array<AppMenuClassificationProps>
 }
 
 const AppMenuClassification = (props: AppMenuClassificationProps) => {
