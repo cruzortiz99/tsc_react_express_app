@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './app-menu-item.css'
 
 export interface AppMenuItemProps {
   link: string
@@ -8,7 +9,7 @@ export interface AppMenuItemProps {
 
 const AppMenuItem = (props: AppMenuItemProps) => {
   return (
-    <li>
+    <li className="app-menu-item">
       <Link to={props.link}>{props.name}</Link>
     </li>
   )
