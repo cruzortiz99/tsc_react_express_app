@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { useState } from 'react'
 import AppMenu from './components/AppMenu/AppMenu'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Introduction from './views/Introduction'
 import './css/main.css'
 import menu from './content/menu.json'
@@ -14,7 +14,9 @@ const App = () => {
     <React.Fragment>
       <Router>
         <AppMenu options={options} />
-        <Route exact path="/(introduction)*" component={Introduction} />
+        <Switch>
+          <Route exact path="/(introduction)*" component={Introduction} />
+        </Switch>
       </Router>
     </React.Fragment>
   )
