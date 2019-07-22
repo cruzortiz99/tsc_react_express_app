@@ -4,6 +4,7 @@
   --page-content-color: rgba(255, 255, 224, 0.2);
   --brand-shadow: gray 0px 2px 4px;
   --menu-shadow: gray 2px 1px 4px;
+  --primary-font-color: rgb(50, 50, 50);
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -20,6 +21,7 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  color: var(--primary-font-color);
 }
 #app {
   display: grid;

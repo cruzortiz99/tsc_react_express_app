@@ -1,3 +1,14 @@
 .app-menu-item {
   text-transform: capitalize;
 }
+.app-menu-item a {
+  text-decoration: none;
+}
+.app-menu-clicked-link {
+  font-weight: bold;
+  background-color: var(--brand-color);
+}
+.app-menu-item-hover:hover {
+  font-weight: bold;
+  background-color: var(--brand-color);
+}
