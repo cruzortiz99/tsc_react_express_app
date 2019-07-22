@@ -2,14 +2,19 @@ import React, { ReactNode } from 'react'
 import AppHeader from '../AppHeader/AppHeader'
 
 export interface AppContentTheoryProps {
-  title: string
+  title?: string
   children?: ReactNode
 }
 
 const AppContentTheory = (props: AppContentTheoryProps) => {
+  let title = props.title ? (
+    <AppHeader text={props.title} level={2} />
+  ) : (
+    undefined
+  )
   return (
     <React.Fragment>
-      <AppHeader text={props.title} level={2} />
+      {title}
       <p>{props.children}</p>
     </React.Fragment>
   )

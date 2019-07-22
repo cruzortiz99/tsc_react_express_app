@@ -4,4 +4,6 @@
   overflow-y: auto;
   z-index: 1;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
 }

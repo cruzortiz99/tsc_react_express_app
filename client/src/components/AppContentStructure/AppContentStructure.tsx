@@ -1,29 +1,16 @@
 import React, { ReactNode, useEffect } from 'react'
-import AppContentExample from '../AppContentExample/AppContentExample'
-import AppContentTheory from '../AppContentTheory/AppContentTheory'
-import AppContentCode from '../AppContentCode/AppContentCode'
 import './app-content-structure.css'
+import AppHeader from '../AppHeader/AppHeader'
 export interface AppContentStructureProps {
   title: string
-  example?: ReactNode
-  paragraphs?: ReactNode
-  code?: ReactNode
+  children?: React.ReactNode
 }
 const AppContentStructure = (props: AppContentStructureProps) => {
   useEffect(() => {}, [false])
   return (
     <div className="app-content">
-      <div>
-        <AppContentExample>{props.example}</AppContentExample>
-      </div>
-      <div>
-        <AppContentTheory title={props.title}>
-          {props.paragraphs}
-        </AppContentTheory>
-      </div>
-      <div>
-        <AppContentCode>{props.code}</AppContentCode>
-      </div>
+      <AppHeader text={props.title} />
+      {props.children}
     </div>
   )
 }
