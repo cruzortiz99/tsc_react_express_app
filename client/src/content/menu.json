@@ -15,49 +15,75 @@
         "name": "comments"
       },
       {
-        "link": "/variables",
-        "name": "variables"
-      },
-      {
-        "link": "/variables/scopes",
-        "name": "scopes"
-      },
-      {
-        "link": "/variables/hoisting",
-        "name": "hoisting"
-      },
-      {
         "link": "/statements",
         "name": "statements"
       },
       {
         "link": "/operations",
         "name": "operations"
-      },
-      {
-        "link": "/functions",
-        "name": "functions"
-      },
-      {
-        "link": "/functions/arrow-functions",
-        "name": "arrow functions"
-      },
-      {
-        "link": "/conditions",
-        "name": "conditions"
-      },
-      {
-        "link": "/loops",
-        "name": "loops"
       }
     ],
     "subclassifications": [
       {
-        "name": "subclassification",
+        "name": "variables",
         "topics": [
           {
-            "name": "algo",
-            "link": "/algo"
+            "link": "/variables",
+            "name": "variables"
+          },
+          {
+            "link": "/variables/scopes",
+            "name": "scopes"
+          },
+          {
+            "link": "/variables/hoisting",
+            "name": "hoisting"
+          }
+        ],
+        "level": 4
+      },
+      {
+        "name": "functions",
+        "topics": [
+          {
+            "link": "/functions",
+            "name": "functions"
+          },
+          {
+            "link": "/functions/arrow-functions",
+            "name": "arrow functions"
+          }
+        ],
+        "level": 4
+      },
+      {
+        "name": "conditions",
+        "topics": [
+          {
+            "link": "/conditions/if-else",
+            "name": "if-else"
+          },
+          {
+            "link": "/conditions/switches",
+            "name": "switches"
+          }
+        ],
+        "level": 4
+      },
+      {
+        "name": "loops",
+        "topics": [
+          {
+            "link": "/loops/for",
+            "name": "for"
+          },
+          {
+            "link": "/loops/while",
+            "name": "while"
+          },
+          {
+            "link": "loops/recursive-functions",
+            "name": "recursive functions"
           }
         ],
         "level": 4
@@ -68,12 +94,8 @@
     "name": "intermedio",
     "topics": [
       {
-        "link": "/events",
-        "name": "events"
-      },
-      {
-        "link": "/math",
-        "name": "math"
+        "link": "/strings",
+        "name": "strings"
       },
       {
         "link": "/arrays",
@@ -84,12 +106,16 @@
         "name": "dates"
       },
       {
-        "link": "/strings",
-        "name": "strings"
+        "link": "/math",
+        "name": "math"
       },
       {
         "link": "/dom-access",
         "name": "dom access"
+      },
+      {
+        "link": "/events",
+        "name": "events"
       },
       {
         "link": "/json",
@@ -102,6 +128,10 @@
       {
         "link": "/classes",
         "name": "classes"
+      },
+      {
+        "link": "/ajax",
+        "name": "ajax"
       }
     ]
   },
