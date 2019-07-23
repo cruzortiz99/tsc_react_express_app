@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { useState } from 'react'
 import AppMenu from './components/AppMenu/AppMenu'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Introduction from './views/Introduction'
+import Introduction from './pages/Introduction'
 import './css/main.css'
 import menu from './content/menu.json'
 
