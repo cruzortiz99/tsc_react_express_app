@@ -28,7 +28,7 @@
         "name": "variables",
         "topics": [
           {
-            "link": "/variables",
+            "link": "/variables/definitions",
             "name": "variables"
           },
           {
@@ -46,7 +46,7 @@
         "name": "functions",
         "topics": [
           {
-            "link": "/functions",
+            "link": "/functions/definitions",
             "name": "functions"
           },
           {
