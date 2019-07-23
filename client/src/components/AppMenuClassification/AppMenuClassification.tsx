@@ -42,7 +42,6 @@ const AppMenuClassification = (props: AppMenuClassificationProps) => {
         )
       })
     : undefined
-  useEffect(() => {}, [false])
   return (
     <React.Fragment>
       {header}

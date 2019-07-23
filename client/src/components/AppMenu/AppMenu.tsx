@@ -21,7 +21,6 @@ const AppMenu = (props: AppMenuProps) => {
       />
     )
   })
-  useEffect(() => {}, [false])
   return (
     <div className="sidebar">
       <div className="app-header">
