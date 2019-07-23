@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import './app-menu-item.css'
 
 export interface AppMenuItemProps {
@@ -9,27 +9,23 @@ export interface AppMenuItemProps {
 }
 
 const AppMenuItem = (props: AppMenuItemProps) => {
-  const [className, setClassName] = useState('app-menu-item-hover')
   const level = props.level || 1
-  const isActive = (match: any, location: any) => {
-    if (match) {
-      setClassName('app-menu-clicked-link')
-      return true
-    }
-    setClassName('app-menu-item-hover')
-    return match
-  }
   return (
-    <NavLink
-      className="app-menu-item"
-      to={props.link}
-      isActive={isActive}
-      exact
-    >
-      <li className={className} style={{ paddingLeft: `${10 * level}px` }}>
-        {props.name}
-      </li>
-    </NavLink>
+    <Route
+      path={props.link}
+      children={({ match }) => {
+        return (
+          <li
+            className={match ? 'app-menu-clicked-link' : 'app-menu-item-hover'}
+            style={{ paddingLeft: `${10 * level}px` }}
+          >
+            <Link className="app-menu-item" to={props.link}>
+              {props.name}
+            </Link>
+          </li>
+        )
+      }}
+    />
   )
 }
 export default AppMenuItem
