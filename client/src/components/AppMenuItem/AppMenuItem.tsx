@@ -16,14 +16,16 @@ const AppMenuItem = (props: AppMenuItemProps) => {
       exact
       children={({ match }) => {
         return (
-          <li
-            className={match ? 'app-menu-clicked-link' : 'app-menu-item-hover'}
-            style={{ paddingLeft: `${10 * level}px` }}
-          >
-            <Link className="app-menu-item" to={props.link}>
+          <Link className="app-menu-item" to={props.link}>
+            <li
+              className={
+                match ? 'app-menu-clicked-link' : 'app-menu-item-hover'
+              }
+              style={{ paddingLeft: `${10 * level}px` }}
+            >
               {props.name}
-            </Link>
-          </li>
+            </li>
+          </Link>
         )
       }}
     />
