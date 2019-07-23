@@ -9,9 +9,9 @@ export interface AppMenuItemProps {
 }
 
 const AppMenuItem = (props: AppMenuItemProps) => {
-  let [className, setClassName] = useState('app-menu-item-hover')
-  let level = props.level || 1
-  let isActive = (match: any, location: any) => {
+  const [className, setClassName] = useState('app-menu-item-hover')
+  const level = props.level || 1
+  const isActive = (match: any, location: any) => {
     if (match) {
       setClassName('app-menu-clicked-link')
       return true

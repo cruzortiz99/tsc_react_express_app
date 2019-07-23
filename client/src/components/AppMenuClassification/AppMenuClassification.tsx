@@ -11,15 +11,15 @@ export interface AppMenuClassificationProps {
 }
 
 const AppMenuClassification = (props: AppMenuClassificationProps) => {
-  let level = props.level || 1
-  let header = props.name ? (
+  const level = props.level || 1
+  const header = props.name ? (
     <div style={{ paddingLeft: `${5 * level}px` }}>
       <AppHeader text={props.name} level={level} />
     </div>
   ) : (
     undefined
   )
-  let items = props.topics.map((topic, key) => {
+  const items = props.topics.map((topic, key) => {
     return (
       <AppMenuItem
         name={topic.name}
@@ -29,7 +29,7 @@ const AppMenuClassification = (props: AppMenuClassificationProps) => {
       />
     )
   })
-  let subclassifications = props.subclassifications
+  const subclassifications = props.subclassifications
     ? props.subclassifications.map((subclassification, key) => {
         return (
           <AppMenuClassification

@@ -7,7 +7,7 @@ export interface AppContentTheoryProps {
 }
 
 const AppContentTheory = (props: AppContentTheoryProps) => {
-  let title = props.title ? (
+  const title = props.title ? (
     <AppHeader text={props.title} level={2} />
   ) : (
     undefined

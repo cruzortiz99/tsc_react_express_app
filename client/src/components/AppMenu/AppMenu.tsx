@@ -11,7 +11,7 @@ export interface AppMenuProps {
 }
 
 const AppMenu = (props: AppMenuProps) => {
-  let classification = props.options.map((classification, key) => {
+  const classification = props.options.map((classification, key) => {
     return (
       <AppMenuClassification
         name={classification.name}

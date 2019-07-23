@@ -6,7 +6,6 @@ export interface AppContentStructureProps {
   children?: React.ReactNode
 }
 const AppContentStructure = (props: AppContentStructureProps) => {
-  useEffect(() => {}, [false])
   return (
     <div className="app-content">
       <AppHeader text={props.title} />

@@ -5,9 +5,9 @@ export interface AppHeaderProps {
   level?: number
 }
 const AppHeader = React.memo((props: AppHeaderProps) => {
-  let level = props.level || 0
-  let component = level > 5 ? `h6` : `h${level + 1}`
-  let className = level < 3 ? 'app-header-uppercase' : 'app-header-capitalize'
+  const level = props.level || 0
+  const component = level > 5 ? `h6` : `h${level + 1}`
+  const className = level < 3 ? 'app-header-uppercase' : 'app-header-capitalize'
   return React.createElement(
     component,
     {
