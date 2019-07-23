@@ -6,49 +6,12 @@ import './app-menu-classifications.css'
 export interface AppMenuClassificationProps {
   name?: string
   level?: number
-  topics: Array<AppMenuItemProps>
-  subclassifications?: Array<AppMenuClassificationProps>
+  path: string
+  routes?: Array<AppMenuClassificationProps>
 }
 
 const AppMenuClassification = (props: AppMenuClassificationProps) => {
   const level = props.level || 1
-  const header = props.name ? (
-    <div style={{ paddingLeft: `${5 * level}px` }}>
-      <AppHeader text={props.name} level={level} />
-    </div>
-  ) : (
-    undefined
-  )
-  const items = props.topics.map((topic, key) => {
-    return (
-      <AppMenuItem
-        name={topic.name}
-        link={topic.link}
-        key={key}
-        level={level}
-      />
-    )
-  })
-  const subclassifications = props.subclassifications
-    ? props.subclassifications.map((subclassification, key) => {
-        return (
-          <AppMenuClassification
-            key={key}
-            topics={subclassification.topics}
-            name={subclassification.name}
-            subclassifications={subclassification.subclassifications}
-            level={subclassification.level}
-          />
-        )
-      })
-    : undefined
-  return (
-    <React.Fragment>
-      {header}
-      <ul>{items}</ul>
-      {subclassifications}
-    </React.Fragment>
-  )
 }
 
 export default AppMenuClassification
