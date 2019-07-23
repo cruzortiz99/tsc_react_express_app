@@ -1,7 +1,7 @@
 .app-menu-item {
   text-transform: capitalize;
 }
-.app-menu-item a {
+.app-menu-item {
   text-decoration: none;
 }
 .app-menu-clicked-link {

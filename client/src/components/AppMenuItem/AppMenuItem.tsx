@@ -5,25 +5,32 @@ import './app-menu-item.css'
 export interface AppMenuItemProps {
   link: string
   name: string
+  level?: number
 }
 
 const AppMenuItem = (props: AppMenuItemProps) => {
-  let [className, setClassName] = useState('app-menu-item app-menu-item-hover')
+  let [className, setClassName] = useState('app-menu-item-hover')
   useEffect(() => {}, [false])
+  let level = props.level || 1
   let isActive = (match: any, location: any) => {
     if (match) {
-      setClassName('app-menu-item app-menu-clicked-link')
+      setClassName('app-menu-clicked-link')
       return true
     }
-    setClassName('app-menu-item app-menu-item-hover')
+    setClassName('app-menu-item-hover')
     return match
   }
   return (
-    <li className={className}>
-      <NavLink to={props.link} isActive={isActive} exact>
+    <NavLink
+      className="app-menu-item"
+      to={props.link}
+      isActive={isActive}
+      exact
+    >
+      <li className={className} style={{ paddingLeft: `${10 * level}px` }}>
         {props.name}
-      </NavLink>
-    </li>
+      </li>
+    </NavLink>
   )
 }
 export default AppMenuItem

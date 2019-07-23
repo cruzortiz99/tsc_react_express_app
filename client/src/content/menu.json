@@ -40,7 +40,7 @@
             "name": "hoisting"
           }
         ],
-        "level": 4
+        "level": 2
       },
       {
         "name": "functions",
@@ -54,7 +54,7 @@
             "name": "arrow functions"
           }
         ],
-        "level": 4
+        "level": 2
       },
       {
         "name": "conditions",
@@ -68,7 +68,7 @@
             "name": "switches"
           }
         ],
-        "level": 4
+        "level": 2
       },
       {
         "name": "loops",
@@ -86,7 +86,7 @@
             "name": "recursive functions"
           }
         ],
-        "level": 4
+        "level": 2
       }
     ]
   },
