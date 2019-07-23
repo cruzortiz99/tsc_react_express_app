@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, NavLink, match } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './app-menu-item.css'
 
 export interface AppMenuItemProps {
