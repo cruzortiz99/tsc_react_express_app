@@ -9,7 +9,8 @@ import menu from './content/menu.json'
 
 const App = () => {
   /* Using react hook to set the state of a functional component */
-  let [options] = useState(menu)
+  /* Passing a function avoid component to re-render, only calling the function in the first rendering */
+  let [options] = useState(() => menu)
   return (
     <React.Fragment>
       <Router>
