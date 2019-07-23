@@ -13,6 +13,7 @@ const AppMenuItem = (props: AppMenuItemProps) => {
   return (
     <Route
       path={props.link}
+      exact
       children={({ match }) => {
         return (
           <li
