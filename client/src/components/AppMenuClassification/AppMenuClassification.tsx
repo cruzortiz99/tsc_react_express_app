@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import AppMenuItem, { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
-import AppHeader from '../AppHeader/AppHeader'
+import AppMenuItem from '../AppMenuItem/AppMenuItem'
 import './app-menu-classifications.css'
 
 export interface AppMenuClassificationProps {
