@@ -32,13 +32,13 @@ const AppMenuClassification = (props: AppMenuClassificationProps) => {
         })
       : undefined
   return (
-    <>
+    <React.Fragment>
       <ul>
         <AppMenuItem link={props.path} name={props.name} level={level} />
         {subRoutes}
       </ul>
       <Route exact path={props.path} component={props.component} />
-    </>
+    </React.Fragment>
   )
 }
 
