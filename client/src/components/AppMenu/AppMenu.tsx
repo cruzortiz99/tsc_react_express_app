@@ -15,8 +15,9 @@ const AppMenu = (props: AppMenuProps) => {
     return (
       <AppMenuClassification
         name={classification.name}
-        topics={classification.topics}
-        subclassifications={classification.subclassifications}
+        path={classification.path}
+        routes={classification.routes}
+        level={classification.level}
         key={key}
       />
     )

@@ -1,165 +1,166 @@
 [
   {
     "name": "básico",
-    "topics": [
+    "path": "/introduction",
+    "routes": [
       {
-        "link": "/introduction",
+        "path": "/introduction",
         "name": "introduction"
       },
       {
-        "link": "/syntax",
+        "path": "/syntax",
         "name": "syntax"
       },
       {
-        "link": "/comments",
+        "path": "/comments",
         "name": "comments"
       },
       {
-        "link": "/statements",
+        "path": "/statements",
         "name": "statements"
       },
       {
-        "link": "/operations",
+        "path": "/operations",
         "name": "operations"
-      }
-    ],
-    "subclassifications": [
+      },
       {
+        "path": "/variables",
         "name": "variables",
-        "topics": [
+        "routes": [
           {
-            "link": "/variables/definitions",
+            "path": "definitions",
             "name": "variables"
           },
           {
-            "link": "/variables/scopes",
+            "path": "scopes",
             "name": "scopes"
           },
           {
-            "link": "/variables/hoisting",
+            "path": "hoisting",
             "name": "hoisting"
           }
-        ],
-        "level": 2
+        ]
       },
       {
-        "name": "functions",
-        "topics": [
+        "path": "/functions",
+        "name": "funciones",
+        "routes": [
           {
-            "link": "/functions/definitions",
+            "path": "definitions",
             "name": "functions"
           },
           {
-            "link": "/functions/arrow-functions",
+            "path": "arrow-functions",
             "name": "arrow functions"
           }
-        ],
-        "level": 2
+        ]
       },
       {
-        "name": "conditions",
-        "topics": [
+        "path": "/conditions",
+        "name": "condicionales",
+        "routes": [
           {
-            "link": "/conditions/if-else",
+            "path": "/conditions/if-else",
             "name": "if-else"
           },
           {
-            "link": "/conditions/switches",
+            "path": "/conditions/switches",
             "name": "switches"
           }
-        ],
-        "level": 2
+        ]
       },
       {
-        "name": "loops",
-        "topics": [
+        "path": "/loops",
+        "name": "ciclos",
+        "routes": [
           {
-            "link": "/loops/for",
+            "path": "/loops/for",
             "name": "for"
           },
           {
-            "link": "/loops/while",
+            "path": "/loops/while",
             "name": "while"
           },
           {
-            "link": "loops/recursive-functions",
+            "path": "loops/recursive-functions",
             "name": "recursive functions"
           }
-        ],
-        "level": 2
+        ]
       }
     ]
   },
   {
     "name": "intermedio",
-    "topics": [
+    "path": "/intermedio",
+    "routes": [
       {
-        "link": "/strings",
+        "path": "/strings",
         "name": "strings"
       },
       {
-        "link": "/arrays",
+        "path": "/arrays",
         "name": "arrays"
       },
       {
-        "link": "/dates",
+        "path": "/dates",
         "name": "dates"
       },
       {
-        "link": "/math",
+        "path": "/math",
         "name": "math"
       },
       {
-        "link": "/dom-access",
+        "path": "/dom-access",
         "name": "dom access"
       },
       {
-        "link": "/events",
+        "path": "/events",
         "name": "events"
       },
       {
-        "link": "/json",
+        "path": "/json",
         "name": "json"
       },
       {
-        "link": "/prototypes",
+        "path": "/prototypes",
         "name": "prototypes"
       },
       {
-        "link": "/classes",
+        "path": "/classes",
         "name": "classes"
       },
       {
-        "link": "/ajax",
+        "path": "/ajax",
         "name": "ajax"
       }
     ]
   },
   {
     "name": "avanzado",
-    "topics": [
+    "path": "avanzado",
+    "routes": [
       {
-        "link": "/reactjs",
+        "path": "/reactjs",
         "name": "reactjs"
       },
       {
-        "link": "/vuejs",
+        "path": "/vuejs",
         "name": "vuejs"
       },
       {
-        "link": "/angularjs",
+        "path": "/angularjs",
         "name": "angularjs"
       },
       {
-        "link": "/nodejs",
+        "path": "/nodejs",
         "name": "nodejs"
       },
       {
-        "link": "/typescript",
+        "path": "/typescript",
         "name": "typescript"
       },
       {
-        "link": "flow",
+        "path": "flow",
         "name": "flow"
       }
     ]

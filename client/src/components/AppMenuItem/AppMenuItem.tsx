@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Link } from 'react-router-dom'
 import './app-menu-item.css'
+import { exact } from 'prop-types'
 
 export interface AppMenuItemProps {
   link: string
