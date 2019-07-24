@@ -15,9 +15,6 @@ const App = () => {
     <React.Fragment>
       <Router>
         <AppMenu options={options} />
-        <Switch>
-          <Route exact path="/(introduction)*" component={Introduction} />
-        </Switch>
       </Router>
     </React.Fragment>
   )

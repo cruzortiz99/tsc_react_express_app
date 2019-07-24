@@ -18,6 +18,7 @@ const AppMenu = (props: AppMenuProps) => {
         path={classification.path}
         routes={classification.routes}
         level={classification.level}
+        component={classification.component}
         key={key}
       />
     )
