@@ -7,10 +7,10 @@ export interface AppContentStructureProps {
 }
 const AppContentStructure = (props: AppContentStructureProps) => {
   return (
-    <div className="app-content">
+    <React.Fragment>
       <AppHeader text={props.title} />
       {props.children}
-    </div>
+    </React.Fragment>
   )
 }
 export default AppContentStructure

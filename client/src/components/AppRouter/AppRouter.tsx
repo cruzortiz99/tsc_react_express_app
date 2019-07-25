@@ -41,7 +41,7 @@ const AppRouter = (props: AppRouterProps) => {
         </div>
         <div className="app-menu">{classification}</div>
       </div>
-      {pages}
+      <div className="app-content">{pages}</div>
     </React.Fragment>
   )
 }

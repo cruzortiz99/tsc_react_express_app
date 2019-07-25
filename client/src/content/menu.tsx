@@ -1,5 +1,5 @@
 import Introduction from '../pages/Introduction'
-
+import React from 'react'
 export default [
   {
     name: 'básico',
@@ -14,22 +14,22 @@ export default [
       {
         path: '/syntax',
         name: 'syntax',
-        component: Introduction
+        component: () => <h1>Syntax</h1>
       },
       {
         path: '/comments',
         name: 'comments',
-        component: Introduction
+        component: () => <h1>Comments</h1>
       },
       {
         path: '/statements',
         name: 'statements',
-        component: Introduction
+        component: () => <h1>Statements</h1>
       },
       {
         path: '/operations',
         name: 'operations',
-        component: Introduction
+        component: () => <h1>Operations</h1>
       },
       {
         path: '/variables',
@@ -38,17 +38,17 @@ export default [
           {
             path: 'definitions',
             name: 'variables',
-            component: Introduction
+            component: () => <h1>Variables</h1>
           },
           {
             path: 'scopes',
             name: 'scopes',
-            component: Introduction
+            component: () => <h1>Scopes</h1>
           },
           {
             path: 'hoisting',
             name: 'hoisting',
-            component: Introduction
+            component: () => <h1>Hoisting</h1>
           }
         ]
       },
@@ -59,12 +59,12 @@ export default [
           {
             path: 'definitions',
             name: 'functions',
-            component: Introduction
+            component: () => <h1>Functions</h1>
           },
           {
             path: 'arrow-functions',
             name: 'arrow functions',
-            component: Introduction
+            component: () => <h1>Arrow Functions</h1>
           }
         ]
       },
@@ -75,12 +75,12 @@ export default [
           {
             path: '/conditions/if-else',
             name: 'if-else',
-            component: Introduction
+            component: () => <h1>If Else</h1>
           },
           {
             path: '/conditions/switches',
             name: 'switches',
-            component: Introduction
+            component: () => <h1>Switches</h1>
           }
         ]
       },
@@ -91,17 +91,17 @@ export default [
           {
             path: '/loops/for',
             name: 'for',
-            component: Introduction
+            component: () => <h1>For loop</h1>
           },
           {
             path: '/loops/while',
             name: 'while',
-            component: Introduction
+            component: () => <h1>While loop</h1>
           },
           {
             path: 'loops/recursive-functions',
             name: 'recursive functions',
-            component: Introduction
+            component: () => <h1>Recursive</h1>
           }
         ]
       }
@@ -114,52 +114,52 @@ export default [
       {
         path: '/strings',
         name: 'strings',
-        component: Introduction
+        component: () => <h1>Strings</h1>
       },
       {
         path: '/arrays',
         name: 'arrays',
-        component: Introduction
+        component: () => <h1>Arrays</h1>
       },
       {
         path: '/dates',
         name: 'dates',
-        component: Introduction
+        component: () => <h1>Dates</h1>
       },
       {
         path: '/math',
         name: 'math',
-        component: Introduction
+        component: () => <h1>Math</h1>
       },
       {
         path: '/dom-access',
         name: 'dom access',
-        component: Introduction
+        component: () => <h1>Dom Access</h1>
       },
       {
         path: '/events',
         name: 'events',
-        component: Introduction
+        component: () => <h1>Events</h1>
       },
       {
         path: '/json',
         name: 'json',
-        component: Introduction
+        component: () => <h1>Json</h1>
       },
       {
         path: '/prototypes',
         name: 'prototypes',
-        component: Introduction
+        component: () => <h1>Prototypes</h1>
       },
       {
         path: '/classes',
         name: 'classes',
-        component: Introduction
+        component: () => <h1>Classes</h1>
       },
       {
         path: '/ajax',
         name: 'ajax',
-        component: Introduction
+        component: () => <h1>Ajax</h1>
       }
     ]
   },
@@ -170,32 +170,32 @@ export default [
       {
         path: '/reactjs',
         name: 'reactjs',
-        component: Introduction
+        component: () => <h1>React</h1>
       },
       {
         path: '/vuejs',
         name: 'vuejs',
-        component: Introduction
+        component: () => <h1>Vue</h1>
       },
       {
         path: '/angularjs',
         name: 'angularjs',
-        component: Introduction
+        component: () => <h1>Angular</h1>
       },
       {
         path: '/nodejs',
         name: 'nodejs',
-        component: Introduction
+        component: () => <h1>Node</h1>
       },
       {
         path: '/typescript',
         name: 'typescript',
-        component: Introduction
+        component: () => <h1>Typescript</h1>
       },
       {
         path: 'flow',
         name: 'flow',
-        component: Introduction
+        component: () => <h1>Flow</h1>
       }
     ]
   }
