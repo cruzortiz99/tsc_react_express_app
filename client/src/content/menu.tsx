@@ -155,7 +155,7 @@ export default [
   },
   {
     name: 'avanzado',
-    path: 'avanzado',
+    path: '/avanzado',
     component: () => <h1>Avanzado</h1>,
     routes: [
       {
