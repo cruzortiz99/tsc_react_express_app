@@ -11,6 +11,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist', 'client'),
+    // Makes react router work for subroutes
     publicPath: '/'
   },
   devtool: 'inline-source.map',
@@ -63,6 +64,7 @@ module.exports = {
   devServer: {
     host: 'localhost',
     port: 3000,
+    // Makes react-router work for subroutes
     historyApiFallback: true,
     open: false,
     hot: true
