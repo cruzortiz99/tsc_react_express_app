@@ -12,25 +12,25 @@ export interface AppRouterProps {
 
 const AppRouter = (props: AppRouterProps) => {
   const pages: Array<React.ReactNode> = []
-  const classification = props.options.map((classification, key) => {
-    if (classification.component) {
+  const menu = props.options.map((menuOption, key) => {
+    if (menuOption.component) {
       pages.push(
         <AppRoute
-          name={classification.name}
-          path={classification.path}
-          routes={classification.routes}
-          component={classification.component}
+          name={menuOption.name}
+          path={menuOption.path}
+          routes={menuOption.routes}
+          component={menuOption.component}
           key={key}
         />
       )
     }
     return (
       <AppMenu
-        name={classification.name}
-        path={classification.path}
-        routes={classification.routes}
-        level={classification.level}
-        component={classification.component}
+        name={menuOption.name}
+        path={menuOption.path}
+        routes={menuOption.routes}
+        level={menuOption.level}
+        component={menuOption.component}
         key={key}
       />
     )
@@ -41,7 +41,7 @@ const AppRouter = (props: AppRouterProps) => {
         <div className="app-header">
           <AppHeader text="JavaScript" />
         </div>
-        <div className="app-menu">{classification}</div>
+        <div className="app-menu">{menu}</div>
       </div>
       <div className="app-content">{pages}</div>
     </React.Fragment>
