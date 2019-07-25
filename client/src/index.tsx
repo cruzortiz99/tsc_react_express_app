@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { useState } from 'react'
-import AppMenu from './components/AppMenu/AppMenu'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Introduction from './pages/Introduction'
+import AppRouter from './components/AppRouter/AppRouter'
+import { BrowserRouter as Router } from 'react-router-dom'
 import './css/main.css'
-import menu from './content/menu.json'
+import menu from './content/menu'
 
 const App = () => {
   /* Using react hook to set the state of a functional component */
@@ -14,7 +13,7 @@ const App = () => {
   return (
     <React.Fragment>
       <Router>
-        <AppMenu options={options} />
+        <AppRouter options={options} />
       </Router>
     </React.Fragment>
   )

@@ -1,35 +1,39 @@
-import React, { useEffect } from 'react'
-import { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
-import AppMenuClassification, {
-  AppMenuClassificationProps
-} from '../AppMenuClassification/AppMenuClassification'
-import AppHeader from '../AppHeader/AppHeader'
+import React, { useEffect, Component } from 'react'
+import AppMenuItem from '../AppMenuItem/AppMenuItem'
 import './app-menu.css'
+import { AppRouteProps } from '../AppRoute/AppRoute'
 
-export interface AppMenuProps {
-  options: Array<AppMenuClassificationProps>
+export interface AppMenuProps extends AppRouteProps {
+  level?: number
 }
 
 const AppMenu = (props: AppMenuProps) => {
-  const classification = props.options.map((classification, key) => {
-    return (
-      <AppMenuClassification
-        name={classification.name}
-        path={classification.path}
-        routes={classification.routes}
-        level={classification.level}
-        component={classification.component}
-        key={key}
-      />
-    )
-  })
+  const level = props.level || 1
+  const subRoutes =
+    props.routes && props.routes.length > 0
+      ? props.routes.map((route, key) => {
+          const subRoute = route.path.startsWith('/')
+            ? route.path
+            : `${props.path}/${route.path}`
+          return (
+            <AppMenu
+              path={subRoute}
+              name={route.name}
+              key={key}
+              level={level + 1}
+              routes={route.routes}
+            />
+          )
+        })
+      : undefined
   return (
-    <div className="sidebar">
-      <div className="app-header">
-        <AppHeader text="JavaScript" />
-      </div>
-      <div className="app-menu">{classification}</div>
-    </div>
+    <React.Fragment>
+      <ul>
+        <AppMenuItem link={props.path} name={props.name} level={level} />
+        {subRoutes}
+      </ul>
+    </React.Fragment>
   )
 }
+
 export default AppMenu
