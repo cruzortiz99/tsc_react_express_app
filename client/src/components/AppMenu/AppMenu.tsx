@@ -22,6 +22,7 @@ const AppMenu = (props: AppMenuProps) => {
               key={key}
               level={level + 1}
               routes={route.routes}
+              component={route.component}
             />
           )
         })

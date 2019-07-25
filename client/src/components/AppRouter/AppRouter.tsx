@@ -13,15 +13,17 @@ export interface AppRouterProps {
 const AppRouter = (props: AppRouterProps) => {
   const pages: Array<React.ReactNode> = []
   const classification = props.options.map((classification, key) => {
-    pages.push(
-      <AppRoute
-        name={classification.name}
-        path={classification.path}
-        routes={classification.routes}
-        component={classification.component}
-        key={key}
-      />
-    )
+    if (classification.component) {
+      pages.push(
+        <AppRoute
+          name={classification.name}
+          path={classification.path}
+          routes={classification.routes}
+          component={classification.component}
+          key={key}
+        />
+      )
+    }
     return (
       <AppMenu
         name={classification.name}

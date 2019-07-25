@@ -1,5 +1,5 @@
 import React, { useEffect, Component } from 'react'
-import { Route, RouteComponentProps } from 'react-router'
+import { Route, RouteComponentProps, Switch } from 'react-router'
 
 export interface AppRouteProps {
   name: string

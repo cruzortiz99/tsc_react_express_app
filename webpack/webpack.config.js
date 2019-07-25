@@ -10,7 +10,8 @@ module.exports = {
   /* Output point of the bundle */
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist', 'client')
+    path: path.resolve(__dirname, 'dist', 'client'),
+    publicPath: '/'
   },
   devtool: 'inline-source.map',
   /* Require to make imports */
