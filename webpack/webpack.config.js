@@ -68,7 +68,7 @@ module.exports = {
     port: 3000,
     // Makes react-router work for subroutes
     historyApiFallback: true,
-    open: true,
+    open: false,
     hot: true
   }
 }

@@ -3,8 +3,9 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 import AppContentExample from '../../components/AppContentExample/AppContentExample'
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
+import { AppPagesProps } from '../AppPages'
 
-const Introduction = () => {
+const Introduction = (props: AppPagesProps) => {
   let title = 'Introducción'
   let paragraphs = (
     <AppContentTheory>
@@ -14,7 +15,12 @@ const Introduction = () => {
   let example = <AppContentExample>Example</AppContentExample>
   let code = <AppContentCode>Code</AppContentCode>
   return (
-    <AppContentStructure title={title}>
+    <AppContentStructure
+      title={title}
+      prevRoute={props.prevRoute}
+      nextRoute={props.nextRoute}
+      {...props}
+    >
       {paragraphs}
       {example}
       {code}

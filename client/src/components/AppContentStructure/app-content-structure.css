@@ -1,0 +1,6 @@
+.app-content-nav-buttons-section {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
