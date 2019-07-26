@@ -1,6 +1,5 @@
 import React, { useEffect, Component } from 'react'
 import AppMenuItem from '../AppMenuItem/AppMenuItem'
-import './app-menu.css'
 import { AppRouteProps } from '../AppRoute/AppRoute'
 
 export interface AppMenuProps extends AppRouteProps {
