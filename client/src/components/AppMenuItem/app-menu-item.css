@@ -1,4 +1,4 @@
-.app-menu-item {
+.app-menu-item-sublevel {
   text-transform: capitalize;
   text-decoration: none;
 }
@@ -9,4 +9,9 @@
 .app-menu-item-hover:hover {
   font-weight: bold;
   background-color: var(--brand-color);
+}
+.app-menu-item-first-level {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
 }

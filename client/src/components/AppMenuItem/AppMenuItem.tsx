@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Link } from 'react-router-dom'
 import './app-menu-item.css'
+import { RouteChildrenProps } from 'react-router'
 
 export interface AppMenuItemProps {
   link: string
@@ -10,17 +11,19 @@ export interface AppMenuItemProps {
 
 const AppMenuItem = (props: AppMenuItemProps) => {
   const level = props.level || 1
+  const classNameByLevel =
+    level < 2 ? 'app-menu-item-first-level' : 'app-menu-item-sublevel'
+  const classByMatch = ({ match }: RouteChildrenProps) =>
+    match ? 'app-menu-clicked-link' : 'app-menu-item-hover'
   return (
     <Route
       path={props.link}
       exact
-      children={({ match }) => {
+      children={(childrenProps) => {
         return (
-          <Link className="app-menu-item" to={props.link}>
+          <Link className={classNameByLevel} to={props.link}>
             <li
-              className={
-                match ? 'app-menu-clicked-link' : 'app-menu-item-hover'
-              }
+              className={classByMatch(childrenProps)}
               style={{ paddingLeft: `${10 * level}px` }}
             >
               {props.name}
