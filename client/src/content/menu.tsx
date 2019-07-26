@@ -1,5 +1,7 @@
 import React from 'react'
 const Basics = React.lazy(() => import('../pages/Basics/Basics'))
+const Medium = React.lazy(() => import('../pages/Medium/Medium'))
+const Advance = React.lazy(() => import('../pages/Advance/Advance'))
 export default [
   {
     name: 'básico',
@@ -99,7 +101,7 @@ export default [
   {
     name: 'intermedio',
     path: '/intermedio',
-    component: () => <h1>Intermedio</h1>,
+    component: () => <Medium />,
     routes: [
       {
         path: '/intermedio/strings',
@@ -156,7 +158,7 @@ export default [
   {
     name: 'avanzado',
     path: '/avanzado',
-    component: () => <h1>Avanzado</h1>,
+    component: () => <Advance />,
     routes: [
       {
         path: '/avanzado/reactjs',
