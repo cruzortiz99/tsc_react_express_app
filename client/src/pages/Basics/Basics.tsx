@@ -6,14 +6,25 @@ import AppContentTheory from '../../components/AppContentTheory/AppContentTheory
 import { AppPagesProps } from '../AppPages'
 
 const Introduction = (props: AppPagesProps) => {
-  let title = 'Introducción'
-  let paragraphs = (
+  const title = 'Introducción'
+  const paragraphs = (
     <AppContentTheory>
       Esto es el curso para principiantes en JavaScript
     </AppContentTheory>
   )
-  let example = <AppContentExample>Example</AppContentExample>
-  let code = <AppContentCode>Code</AppContentCode>
+  const example = <AppContentExample>Example</AppContentExample>
+  const codeCss = (
+    <AppContentCode type="css">console.log('Hola Mundo')</AppContentCode>
+  )
+  const codeJs = (
+    <AppContentCode type="js">console.log('Hola Mundo')</AppContentCode>
+  )
+  const codeHtml = (
+    <AppContentCode type="html">console.log('Hola Mundo')</AppContentCode>
+  )
+  const codeDefault = (
+    <AppContentCode type="default">console.log('Hola Mundo')</AppContentCode>
+  )
   return (
     <AppContentStructure
       title={title}
@@ -23,7 +34,10 @@ const Introduction = (props: AppPagesProps) => {
     >
       {paragraphs}
       {example}
-      {code}
+      {codeCss}
+      {codeJs}
+      {codeHtml}
+      {codeDefault}
     </AppContentStructure>
   )
 }
