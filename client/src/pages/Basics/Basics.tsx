@@ -1,8 +1,8 @@
 import React from 'react'
-import AppContentStructure from '../components/AppContentStructure/AppContentStructure'
-import AppContentCode from '../components/AppContentCode/AppContentCode'
-import AppContentExample from '../components/AppContentExample/AppContentExample'
-import AppContentTheory from '../components/AppContentTheory/AppContentTheory'
+import AppContentStructure from '../../components/AppContentStructure/AppContentStructure'
+import AppContentCode from '../../components/AppContentCode/AppContentCode'
+import AppContentExample from '../../components/AppContentExample/AppContentExample'
+import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 
 const Introduction = () => {
   let title = 'Introducción'
