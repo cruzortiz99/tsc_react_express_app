@@ -10,9 +10,11 @@ module.exports = {
   /* Output point of the bundle */
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist', 'client'),
+    path: path.resolve(__dirname, '..', 'dist', 'client'),
     // Makes react router work for subroutes
-    publicPath: '/'
+    publicPath: '/',
+    // code splitting
+    chunkFilename: '[name].module.js'
   },
   devtool: 'inline-source.map',
   /* Require to make imports */
@@ -66,7 +68,7 @@ module.exports = {
     port: 3000,
     // Makes react-router work for subroutes
     historyApiFallback: true,
-    open: false,
+    open: true,
     hot: true
   }
 }

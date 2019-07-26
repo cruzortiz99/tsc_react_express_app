@@ -1,5 +1,4 @@
-import React, { ReactNode, useEffect } from 'react'
-import './app-content-structure.css'
+import React from 'react'
 import AppHeader from '../AppHeader/AppHeader'
 export interface AppContentStructureProps {
   title: string

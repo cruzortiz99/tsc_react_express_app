@@ -1,10 +1,10 @@
-import Introduction from '../pages/Introduction'
 import React from 'react'
+const Introduction = React.lazy(() => import('../pages/Introduction'))
 export default [
   {
     name: 'básico',
     path: '/',
-    component: Introduction,
+    component: () => <Introduction />,
     routes: [
       {
         path: '/basics/syntax',
