@@ -14,16 +14,24 @@ const Introduction = (props: AppPagesProps) => {
   )
   const example = <AppContentExample>Example</AppContentExample>
   const codeCss = (
-    <AppContentCode type="css">console.log('Hola Mundo')</AppContentCode>
+    <AppContentCode type="css">
+      {`.hola-mundo{
+/** ... */
+}`}
+    </AppContentCode>
   )
   const codeJs = (
     <AppContentCode type="js">console.log('Hola Mundo')</AppContentCode>
   )
   const codeHtml = (
-    <AppContentCode type="html">console.log('Hola Mundo')</AppContentCode>
+    <AppContentCode type="html">
+      {`<h1> Hola Mundo </h1>'`}
+    </AppContentCode>
   )
   const codeDefault = (
-    <AppContentCode type="default">console.log('Hola Mundo')</AppContentCode>
+    <AppContentCode type="default">
+    {`Hola mundo`}
+    </AppContentCode>
   )
   return (
     <AppContentStructure
