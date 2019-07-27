@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import './app-content-code.css'
 export interface AppContentCodeProps {
   type: 'css' | 'js' | 'html' | string
-  children?: ReactNode
+  children?: string
 }
 const AppContentCode = (props: AppContentCodeProps) => {
   const codeColor = (
