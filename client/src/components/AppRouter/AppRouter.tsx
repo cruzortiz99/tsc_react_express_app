@@ -3,7 +3,6 @@ import { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
 import AppMenu, { AppMenuProps } from '../AppMenu/AppMenu'
 import AppHeader from '../AppHeader/AppHeader'
 import './app-router.css'
-import { Route } from 'react-router'
 import AppRoute from '../AppRoute/AppRoute'
 
 export interface AppRouterProps {

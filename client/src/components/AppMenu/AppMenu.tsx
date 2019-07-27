@@ -1,4 +1,4 @@
-import React, { useEffect, Component } from 'react'
+import React from 'react'
 import AppMenuItem from '../AppMenuItem/AppMenuItem'
 import { AppRouteProps } from '../AppRoute/AppRoute'
 

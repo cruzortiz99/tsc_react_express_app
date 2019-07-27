@@ -1,4 +1,4 @@
-.app-menu-item {
+.app-menu-item-sublevel {
   text-transform: capitalize;
   text-decoration: none;
 }
@@ -10,6 +10,8 @@
   font-weight: bold;
   background-color: var(--brand-color);
 }
-.app-menu-iten-level-1 {
+.app-menu-item-first-level {
   text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
 }

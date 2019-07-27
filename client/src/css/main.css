@@ -5,9 +5,11 @@
   --brand-shadow: gray 0px 2px 4px;
   --menu-shadow: gray 2px 1px 4px;
   --primary-font-color: rgb(50, 50, 50);
+  --secondary-font-color: white;
 }
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
@@ -15,7 +17,6 @@
 }
 ::-webkit-scrollbar-track {
   background-color: lightgray;
-  border-radius: 10px;
 }
 * {
   box-sizing: border-box;

@@ -1,5 +1,5 @@
-import React, { useEffect, Component } from 'react'
-import { Route, RouteComponentProps, Switch } from 'react-router'
+import React from 'react'
+import { Route, RouteComponentProps } from 'react-router'
 
 export interface AppRouteProps {
   name: string
@@ -31,8 +31,10 @@ const AppRoute = (props: AppRouteProps) => {
       : undefined
   return (
     <React.Fragment>
-      <Route path={props.path} exact component={props.component} />
-      {subRoutes}
+      <React.Suspense fallback={<h1>...Loading</h1>}>
+        <Route path={props.path} exact component={props.component} />
+        {subRoutes}
+      </React.Suspense>
     </React.Fragment>
   )
 }
