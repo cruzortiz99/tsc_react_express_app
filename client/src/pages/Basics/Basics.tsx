@@ -12,7 +12,7 @@ const Introduction = (props: AppPagesProps) => {
       Esto es el curso para principiantes en JavaScript
     </AppContentTheory>
   )
-  const example = <AppContentExample>Example</AppContentExample>
+  const example = <AppContentExample boxName="Example" />
   const codeCss = (
     <AppContentCode type="css">
       {`.hola-mundo{
@@ -24,14 +24,10 @@ const Introduction = (props: AppPagesProps) => {
     <AppContentCode type="js">console.log('Hola Mundo')</AppContentCode>
   )
   const codeHtml = (
-    <AppContentCode type="html">
-      {`<h1> Hola Mundo </h1>'`}
-    </AppContentCode>
+    <AppContentCode type="html">{`<h1> Hola Mundo </h1>'`}</AppContentCode>
   )
   const codeDefault = (
-    <AppContentCode type="default">
-    {`Hola mundo`}
-    </AppContentCode>
+    <AppContentCode type="default">{`Hola mundo`}</AppContentCode>
   )
   return (
     <AppContentStructure

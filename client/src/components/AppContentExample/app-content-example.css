@@ -1,7 +1,25 @@
 .app-content-example-container {
-  box-shadow: 0px 10px 15px;
   margin: var(--page-content-vertical-gap) 0px;
   min-height: 200px;
   height: auto;
   border-radius: var(--border-radius);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: darkgray 2px solid;
+  position: relative;
+}
+.app-content-example-box-title {
+  content: 'Ejemplo';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: white;
+  display: block;
+  min-width: 75px;
+  text-align: center;
+  border-left: 4px solid darkgray;
+  border-right: 4px solid darkgray;
+  text-transform: uppercase;
 }
