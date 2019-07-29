@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import './app-content-example.css'
 
 export interface AppContentExampleProps {
   children?: ReactNode
@@ -7,7 +8,7 @@ export interface AppContentExampleProps {
 const AppContentExample = (props: AppContentExampleProps) => {
   return (
     <React.Fragment>
-      <div>{props.children}</div>
+      <div className="app-content-example-container">{props.children}</div>
     </React.Fragment>
   )
 }

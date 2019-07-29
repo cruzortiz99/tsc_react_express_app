@@ -6,6 +6,8 @@
   --menu-shadow: gray 2px 1px 4px;
   --primary-font-color: rgb(50, 50, 50);
   --secondary-font-color: white;
+  --page-content-vertical-gap: 10px;
+  --border-radius: 4px;
 }
 ::-webkit-scrollbar {
   width: 8px;

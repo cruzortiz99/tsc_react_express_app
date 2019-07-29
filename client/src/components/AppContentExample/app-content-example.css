@@ -1,0 +1,7 @@
+.app-content-example-container {
+  box-shadow: 0px 10px 15px;
+  margin: var(--page-content-vertical-gap) 0px;
+  min-height: 200px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
