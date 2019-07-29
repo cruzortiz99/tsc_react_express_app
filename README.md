@@ -49,7 +49,8 @@ Typescript React Express FullStack App
      /* Output point of the ui bundle */
      output: {
        filename: '[name].js',
-       path: path.resolve(__dirname, 'dist', 'client')
+       path: path.resolve(__dirname, 'dist', 'client'),
+       publicPath: '/'
      },
      devtool: 'inline-source.map',
      /* Require to make imports */
@@ -103,10 +104,21 @@ Typescript React Express FullStack App
        host: 'localhost',
        port: 3000,
        historyApiFallback: true,
-       open: true,
+       open: false,
        hot: true
      }
    }
    ```
 
-2. ## Typescript Express Setup
+   1.3. Setup to split code into several modules
+
+   ```json
+   // tsconfig.json
+   {
+   "compilerOptions": {
+
+    "target": "es5",
+    // allows code splitting
+    "module": "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    // ...
+   ```
