@@ -13,8 +13,7 @@
 .app-content-example-box-title {
   content: 'Ejemplo';
   position: absolute;
-  top: -10px;
-  left: 10px;
+  top: calc(-1 * var(--font-size));
   background-color: white;
   display: block;
   min-width: 75px;
@@ -22,16 +21,11 @@
   border-left: 4px solid darkgray;
   border-right: 4px solid darkgray;
   text-transform: uppercase;
+  font-size: calc(2 * var(--font-size));
   transition: all 2s;
   transition-timing-function: ease-out;
 }
-.app-content-example-box-title:before {
-  content: '';
-  height: 100%;
-  width: 0%;
-  border-top: solid darkgray 2px;
-}
-.app-content-example-container:hover .app-content-example-box-title:before,
-.app-content-example-container:hover .app-content-example-box-title:after {
-  width: 100%;
+
+.app-content-example-container:hover .app-content-example-box-title {
+  font-size: var(--font-size);
 }

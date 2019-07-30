@@ -8,6 +8,7 @@
   --secondary-font-color: white;
   --page-content-vertical-gap: 10px;
   --border-radius: 4px;
+  --font-size: 16px;
 }
 ::-webkit-scrollbar {
   width: 8px;
