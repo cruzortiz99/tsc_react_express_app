@@ -11,10 +11,9 @@
   position: relative;
 }
 .app-content-example-box-title {
-  content: 'Ejemplo';
   position: absolute;
   top: calc(-1 * var(--font-size));
-  background-color: white;
+  background-color: var(--page-content-color);
   display: block;
   min-width: 75px;
   text-align: center;
