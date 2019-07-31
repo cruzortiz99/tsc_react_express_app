@@ -14,7 +14,9 @@ const AppMenuItem = (props: AppMenuItemProps) => {
   const classNameByLevel =
     level < 2 ? 'app-menu-item-first-level' : 'app-menu-item-sublevel'
   const classByMatch = ({ match }: RouteChildrenProps) =>
-    match ? 'app-menu-clicked-link' : 'app-menu-item-hover'
+    match
+      ? 'app-menu-item app-menu-item-clicked'
+      : 'app-menu-item app-menu-item-hover'
   return (
     <Route
       path={props.link}

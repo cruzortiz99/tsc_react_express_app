@@ -1,8 +1,11 @@
+.app-menu-item {
+  list-style: none;
+}
 .app-menu-item-sublevel {
   text-transform: capitalize;
   text-decoration: none;
 }
-.app-menu-clicked-link {
+.app-menu-item-clicked {
   font-weight: bold;
   background-color: var(--brand-color);
 }

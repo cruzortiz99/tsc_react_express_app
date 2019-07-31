@@ -1,11 +1,11 @@
 .sidebar {
   grid-area: pg-sd-bar;
   display: grid;
-  grid-template-rows: minmax(min-content, 10vh) auto;
+  grid-template-rows: minmax(15vh, min-content) auto;
   height: 100vh;
   overflow-y: auto;
   position: fixed;
-  width: 200px;
+  width: var(--sidebar-width);
   border-right: darkgray 2px solid;
 }
 .app-header {
@@ -24,9 +24,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-.app-menu li {
-  list-style: none;
 }
 .app-content {
   grid-area: pg-content;
