@@ -15,7 +15,7 @@ const AppContentTheory = (props: AppContentTheoryProps) => {
   return (
     <React.Fragment>
       {title}
-      <p>{props.children}</p>
+      {props.children}
     </React.Fragment>
   )
 }

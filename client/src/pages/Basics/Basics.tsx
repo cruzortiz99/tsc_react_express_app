@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppContentStructure from '../../components/AppContentStructure/AppContentStructure'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 import AppContentExample from '../../components/AppContentExample/AppContentExample'
@@ -6,28 +6,66 @@ import AppContentTheory from '../../components/AppContentTheory/AppContentTheory
 import { AppPagesProps } from '../AppPages'
 
 const Introduction = (props: AppPagesProps) => {
+  const [displayHolaMundo, setDisplayHolaMundo] = useState('none')
   const title = 'Introducción'
   const paragraphs = (
     <AppContentTheory>
-      Esto es el curso para principiantes en JavaScript
+      <p>
+        JavaScript es el lenguaje de de la Web, es lo que permite a las paginas
+        webs pasar de ser estáticas a ser páginas dinámicas o aplicaciones webs.
+        Ofrece muchas ventajas aprender javascript:
+      </p>
+      <ul>
+        <li>Fácil de aprender</li>
+        <li>
+          Sigue evolucionando, añadiendo funcionalidades y mejorando la
+          experiencia del desarrollador
+        </li>
+        <li>
+          Es el lenguaje que utiliza la web, si quieres desarrollar web
+          necesitas JS
+        </li>
+        <li>La comunidad tiene tendencia open source</li>
+        <li>La cantidad de librerías y frameworks crece</li>
+        <li>Posee una gran comunidad que se expande</li>
+      </ul>
     </AppContentTheory>
   )
-  const example = <AppContentExample boxName="Example" />
-  const codeCss = (
-    <AppContentCode type="css">
-      {`.hola-mundo{
-/** ... */
-}`}
-    </AppContentCode>
+  const example = (
+    <AppContentExample boxName="Ejemplo">
+      <div>
+        <p style={{ display: displayHolaMundo }}>Hola Mundo</p>
+        <button
+          onClick={() => {
+            setDisplayHolaMundo((prevState) => {
+              return prevState === 'none' ? 'block' : 'none'
+            })
+          }}
+        >
+          {displayHolaMundo === 'none' ? 'Mostrar' : 'Ocultar'}
+        </button>
+      </div>
+    </AppContentExample>
   )
   const codeJs = (
-    <AppContentCode type="js">console.log('Hola Mundo')</AppContentCode>
+    <AppContentCode type="js">
+      {`function showParagraph () {
+          var paragraph = document.getElementById('paragraph')
+          var currentDisplayValue =  paragraph.style.display
+          
+          paragraph.style.display = (currentDisplayValue === 'none') ? 'block' : 'none'
+          
+          var button = document.getElementById('button')
+          console.log(currentDisplayValue)
+          button.innerText = (currentDisplayValue !== 'none') ? 'Mostrar' :  'Ocultar'\n}`}
+    </AppContentCode>
   )
   const codeHtml = (
-    <AppContentCode type="html">{`<h1> Hola Mundo </h1>'`}</AppContentCode>
-  )
-  const codeDefault = (
-    <AppContentCode type="default">{`Hola mundo`}</AppContentCode>
+    <AppContentCode type="html">
+      {`<p id="paragraph" style="{display: 'none'}"> Hola Mundo </p>'
+
+<button id="button" on-click="showParagraph()"> Mostrar </button>`}
+    </AppContentCode>
   )
   return (
     <AppContentStructure
@@ -36,12 +74,10 @@ const Introduction = (props: AppPagesProps) => {
       nextRoute={props.nextRoute}
       {...props}
     >
-      {paragraphs}
       {example}
-      {codeCss}
-      {codeJs}
+      {paragraphs}
       {codeHtml}
-      {codeDefault}
+      {codeJs}
     </AppContentStructure>
   )
 }
