@@ -1,8 +1,10 @@
 import React, { ReactNode } from 'react'
 import AppHeader from '../AppHeader/AppHeader'
+import './app-content-theory.css'
 
 export interface AppContentTheoryProps {
   title?: string
+  className?: string
   children?: ReactNode
 }
 
@@ -12,10 +14,11 @@ const AppContentTheory = (props: AppContentTheoryProps) => {
   ) : (
     undefined
   )
+  const className = props.className ? props.className : 'text-content'
   return (
     <React.Fragment>
       {title}
-      {props.children}
+      <div className={`text-content ${className}`}>{props.children}</div>
     </React.Fragment>
   )
 }

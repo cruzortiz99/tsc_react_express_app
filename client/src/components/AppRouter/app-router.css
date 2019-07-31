@@ -4,9 +4,9 @@
   grid-template-rows: minmax(min-content, 10vh) auto;
   height: 100vh;
   overflow-y: auto;
-  box-shadow: var(--menu-shadow);
   position: fixed;
   width: 200px;
+  border-right: darkgray 2px solid;
 }
 .app-header {
   grid-row: 1 / 2;
@@ -32,9 +32,8 @@
   grid-area: pg-content;
   background-color: var(--page-content-color);
   overflow-y: auto;
-  z-index: 1;
+  z-index: -1;
   padding: 15px 30px;
   display: flex;
   flex-direction: column;
-  z-index: -1;
 }

@@ -1,0 +1,14 @@
+.text-content li {
+  list-style: none;
+}
+.text-content ul li::before {
+  content: '\2023';
+  margin-right: 4px;
+  background-color: rgb(0, 160, 0);
+  color: var(--brand-color);
+  border-radius: 50%;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+}
