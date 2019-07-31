@@ -15,7 +15,7 @@ const Introduction = (props: AppPagesProps) => {
         webs pasar de ser estáticas a ser páginas dinámicas o aplicaciones webs.
         Ofrece muchas ventajas aprender javascript:
       </p>
-      <ol>
+      <ul>
         <li>Fácil de aprender</li>
         <li>
           Sigue evolucionando, añadiendo funcionalidades y mejorando la
@@ -28,7 +28,7 @@ const Introduction = (props: AppPagesProps) => {
         <li>La comunidad tiene tendencia open source</li>
         <li>La cantidad de librerías y frameworks crece</li>
         <li>Posee una gran comunidad que se expande</li>
-      </ol>
+      </ul>
     </AppContentTheory>
   )
   const example = (
