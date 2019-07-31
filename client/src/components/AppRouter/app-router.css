@@ -32,7 +32,6 @@
   grid-area: pg-content;
   background-color: var(--page-content-color);
   overflow-y: auto;
-  z-index: -1;
   padding: 15px 30px;
   display: flex;
   flex-direction: column;
