@@ -6,7 +6,6 @@
   text-decoration: none;
 }
 .app-menu-item-clicked {
-  font-weight: bold;
   background-color: var(--brand-color);
 }
 .app-menu-item-hover:hover {
@@ -16,5 +15,7 @@
 .app-menu-item-first-level {
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
+}
+.app-menu-item-first-level li {
+  font-family: 'Fredoka One', cursive;
 }

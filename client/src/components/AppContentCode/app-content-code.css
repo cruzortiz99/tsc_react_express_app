@@ -16,11 +16,12 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  font-family: var(--code-label-font-family);
 }
 .app-content-code .code {
   height: 100%;
   padding: 10px;
-  font-family: monospace, 'Courier New', Courier;
+  font-family: 'Courier New', Courier, monospace;
 }
 .app-content-code .js {
   color: var(--brand-color);

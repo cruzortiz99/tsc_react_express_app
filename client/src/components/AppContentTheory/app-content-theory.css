@@ -1,7 +1,6 @@
 .text-content {
   display: grid;
   grid-gap: 10px;
-  line-height: calc(1.5 * var(--font-size));
 }
 .text-content li {
   list-style: none;
@@ -22,7 +21,7 @@
   counter-reset: li;
 }
 .text-content ol li::before {
-  content: counter(li)'.';
+  content: counter(li) '.';
   counter-increment: li;
   margin-right: 4px;
   display: inline-block;
