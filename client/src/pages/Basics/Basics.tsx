@@ -52,9 +52,7 @@ const Introduction = (props: AppPagesProps) => {
       {`function showParagraph () {
     var paragraph = document.getElementById('paragraph')
     var currentDisplayValue =  paragraph.style.display
-
     paragraph.style.display = (currentDisplayValue === 'none') ? 'block' : 'none'
-
     var button = document.getElementById('button')
     console.log(currentDisplayValue)
     button.innerText = (currentDisplayValue !== 'none') ? 'Mostrar' :  'Ocultar'\n}`}
@@ -63,7 +61,6 @@ const Introduction = (props: AppPagesProps) => {
   const codeHtml = (
     <AppContentCode type="html">
       {`<p id="paragraph" style="{display: 'none'}"> Hola Mundo </p>'
-
 <button id="button" on-click="showParagraph()"> Mostrar </button>`}
     </AppContentCode>
   )
