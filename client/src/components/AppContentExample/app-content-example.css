@@ -21,7 +21,7 @@
   border-right: 4px solid darkgray;
   text-transform: uppercase;
   font-size: calc(2 * var(--font-size));
-  transition: all 1s;
+  transition: all 0.7s;
   transition-timing-function: ease-out;
 }
 
