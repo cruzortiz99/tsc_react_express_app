@@ -122,5 +122,4 @@ Typescript React Express FullStack App
     "module": "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
     // ...
    ```
-   1.4. Setup to use CSS-Modules in JS
    
