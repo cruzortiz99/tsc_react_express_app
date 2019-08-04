@@ -15,7 +15,7 @@ const Introduction = (props: AppPagesProps) => {
         webs pasar de ser estáticas a ser páginas dinámicas o aplicaciones webs.
         Ofrece muchas ventajas aprender javascript:
       </p>
-      <ol>
+      <ul>
         <li>Fácil de aprender</li>
         <li>
           Sigue evolucionando, añadiendo funcionalidades y mejorando la
@@ -28,7 +28,7 @@ const Introduction = (props: AppPagesProps) => {
         <li>La comunidad tiene tendencia open source</li>
         <li>La cantidad de librerías y frameworks crece</li>
         <li>Posee una gran comunidad que se expande</li>
-      </ol>
+      </ul>
     </AppContentTheory>
   )
   const example = (
@@ -52,9 +52,7 @@ const Introduction = (props: AppPagesProps) => {
       {`function showParagraph () {
     var paragraph = document.getElementById('paragraph')
     var currentDisplayValue =  paragraph.style.display
-
     paragraph.style.display = (currentDisplayValue === 'none') ? 'block' : 'none'
-
     var button = document.getElementById('button')
     console.log(currentDisplayValue)
     button.innerText = (currentDisplayValue !== 'none') ? 'Mostrar' :  'Ocultar'\n}`}
@@ -63,7 +61,6 @@ const Introduction = (props: AppPagesProps) => {
   const codeHtml = (
     <AppContentCode type="html">
       {`<p id="paragraph" style="{display: 'none'}"> Hola Mundo </p>'
-
 <button id="button" on-click="showParagraph()"> Mostrar </button>`}
     </AppContentCode>
   )

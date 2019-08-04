@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Fredoka+One|Rubik|Saira+Stencil+One&display=swap');
+
 :root {
   --brand-color: gold;
   --menu-color: rgba(255, 217, 0, 0.1);
   --page-content-color: #fffff9;
-  --brand-shadow: gray 0px 2px 4px;
-  --menu-shadow: gray 2px 1px 4px;
   --primary-font-color: rgb(50, 50, 50);
   --secondary-font-color: white;
   --page-content-vertical-gap: 10px;
   --border-radius: 4px;
   --font-size: 20px;
   --sidebar-width: 250px;
+  --code-label-font-family: 'Audiowide', monospace;
+  --content-font-family: 'Rubik', sans-serif;
+  --header-font-family: 'Saira Stencil One', cursive;
+  --general-purpose-border: 2px solid darkgray;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -17,7 +21,7 @@
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: darkgray;
+  background-color: gray;
 }
 ::-webkit-scrollbar-track {
   background-color: lightgray;
@@ -28,6 +32,17 @@
   padding: 0px;
   color: var(--primary-font-color);
   font-size: var(--font-size);
+  font-family: var(--content-font-family);
+  line-height: calc(1.5 * var(--font-size));
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font-family);
+  font-weight: 100;
 }
 h1 {
   font-size: calc(1.6 * var(--font-size));

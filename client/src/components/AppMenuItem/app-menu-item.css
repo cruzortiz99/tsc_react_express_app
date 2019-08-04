@@ -6,15 +6,41 @@
   text-decoration: none;
 }
 .app-menu-item-clicked {
-  font-weight: bold;
   background-color: var(--brand-color);
 }
+.app-menu-item-clicked::before {
+  content: '';
+  margin-right: 5px;
+  border-left: rgb(80, 80, 80) calc(var(--font-size) / 4) solid;
+  border-top: var(--brand-color) calc(var(--font-size) / 4) solid;
+  border-bottom: var(--brand-color) calc(var(--font-size) / 4) solid;
+  color: var(--brand-color);
+  display: inline-block;
+  height: calc(var(--font-size) / 100);
+  text-align: center;
+  animation: fade;
+  animation-duration: 0.1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
 .app-menu-item-hover:hover {
-  font-weight: bold;
   background-color: var(--brand-color);
 }
 .app-menu-item-first-level {
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
+}
+.app-menu-item-first-level li {
+  font-family: 'Fredoka One', cursive;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    border-left: rgb(80, 80, 80) calc(0 * var(--font-size) / 4) solid;
+  }
+  to {
+    opacity: 1;
+    border-left: rgb(80, 80, 80) calc(var(--font-size) / 4) solid;
+  }
 }
