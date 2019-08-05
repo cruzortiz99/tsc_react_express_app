@@ -1,11 +1,11 @@
 import React from 'react'
-import './app-button.css'
+import classes from './app-button.css'
 export interface AppButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 const AppButton = (props: AppButtonProps) => {
   return (
     <button
-      className={props.className || 'app-content-nav-button'}
+      className={props.className || classes.button}
       onClick={props.onClick}
     >
       {props.children}

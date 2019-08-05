@@ -1,4 +1,4 @@
-.app-content-nav-button {
+.button {
   position: relative;
   border: none;
   border-radius: var(--border-radius);
@@ -10,8 +10,8 @@
   transition-timing-function: linear;
   font-weight: bold;
 }
-.app-content-nav-button::before,
-.app-content-nav-button::after {
+.button::before,
+.button::after {
   content: '';
   position: absolute;
   height: 20%;
@@ -21,30 +21,30 @@
   transition: all 0.4s;
   transition-timing-function: ease-out;
 }
-.app-content-nav-button::before {
+.button::before {
   top: 0px;
   left: 0px;
   border-top: 2px solid gray;
   border-left: 2px solid gray;
 }
-.app-content-nav-button::after {
+.button::after {
   bottom: 0px;
   right: 0px;
   border-bottom: 2px solid gray;
   border-right: 2px solid gray;
 }
 
-.app-content-nav-button:hover {
+.button:hover {
   cursor: pointer;
   border: none;
 }
-.app-content-nav-button:hover::before,
-.app-content-nav-button:hover::after {
+.button:hover::before,
+.button:hover::after {
   height: 100%;
   width: 100%;
 }
-.app-content-nav-button:focus::before,
-.app-content-nav-button:focus::after,
-.app-content-nav-button:focus {
+.button:focus::before,
+.button:focus::after,
+.button:focus {
   outline: none;
 }
