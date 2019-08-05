@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react'
-import './app-content-code.css'
+import React from 'react'
+import classes from './app-content-code.css'
 export interface AppContentCodeProps {
   type: 'css' | 'js' | 'html' | string
   children?: string
@@ -9,23 +9,27 @@ const AppContentCode = (props: AppContentCodeProps) => {
     type: 'css' | 'js' | 'html' | string,
     basicClassName: string
   ) => {
+    let className: [string, string] | [] = []
     switch (type) {
       case 'css':
-        return `${basicClassName} css`
+        className = [basicClassName, classes.css]
       case 'js':
-        return `${basicClassName} js`
+        className = [basicClassName, classes.js]
       case 'html':
-        return `${basicClassName} html`
+        className = [basicClassName, classes.html]
       default:
-        return `${basicClassName} default`
+        className = [basicClassName, classes.default]
     }
+    return className.join(' ')
   }
   return (
-    <pre className="app-content-code">
-      <div className={codeColor(props.type, 'label')}>
+    <pre className={classes.code}>
+      <div className={codeColor(props.type, classes.label)}>
         {props.type.toUpperCase()}
       </div>
-      <code className={codeColor(props.type, 'code')}>{props.children}</code>
+      <code className={codeColor(props.type, classes.insideCode)}>
+        {props.children}
+      </code>
     </pre>
   )
 }

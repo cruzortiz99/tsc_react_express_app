@@ -1,4 +1,4 @@
-.app-content-code {
+.code {
   background-color: rgb(0, 21, 44);
   white-space: pre;
   word-wrap: break-word;
@@ -9,7 +9,7 @@
   min-height: 150px;
   margin: var(--page-content-vertical-gap) 0px;
 }
-.app-content-code .label {
+.code .label {
   border-right: 1px solid aliceblue;
   min-width: 60px;
   display: flex;
@@ -18,20 +18,20 @@
   font-weight: bold;
   font-family: var(--code-label-font-family);
 }
-.app-content-code .code {
+.code .inside-code {
   height: 100%;
   padding: 10px;
   font-family: 'Courier New', Courier, monospace;
 }
-.app-content-code .js {
+.code .js {
   color: var(--brand-color);
 }
-.app-content-code .css {
+.code .css {
   color: dodgerblue;
 }
-.app-content-code .html {
+.code .html {
   color: orangered;
 }
-.app-content-code .default {
+.code .default {
   color: azure;
 }
