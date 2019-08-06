@@ -13,10 +13,13 @@ const AppContentCode = (props: AppContentCodeProps) => {
     switch (type) {
       case 'css':
         className = [basicClassName, classes.css]
+        break
       case 'js':
         className = [basicClassName, classes.js]
+        break
       case 'html':
         className = [basicClassName, classes.html]
+        break
       default:
         className = [basicClassName, classes.default]
     }

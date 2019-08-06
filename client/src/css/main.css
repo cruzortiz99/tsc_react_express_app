@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Fredoka+One|Rubik|Saira+Stencil+One&display=swap');
-
 :root {
   --brand-color: gold;
   --menu-color: rgba(255, 217, 0, 0.1);
@@ -59,7 +58,7 @@ h4 {
 h5 {
   font-size: calc(1.1 * var(--font-size));
 }
-#app {
+:global #app {
   display: grid;
   grid-template-areas: 'pg-sd-bar pg-content';
   grid-template-columns: var(--sidebar-width) auto;

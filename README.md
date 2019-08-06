@@ -110,7 +110,41 @@ Typescript React Express FullStack App
    }
    ```
 
-   1.3. Setup to split code into several modules
+   1.3. setup to work with css modules
+
+   ```javascript
+   // webpack.config.js
+   //...
+             {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]__[hash:base64]'
+              },
+              importLoaders: 0,
+              localsConvention: 'camelCase'
+            }
+          }
+   //...
+   ```
+
+   ```typescript
+   // modules.css.d.ts
+   // To use import class from '*.css'
+   declare module '*.css' {
+     interface IClassName {
+       [className: string]: string
+     }
+     const className: IClassName
+     export = className
+   }
+   ```
+
+   If want autocompletion, must build a css.s.ts with the classes.
+
+   1.4. Setup to split code into several modules
 
    ```json
    // tsconfig.json
@@ -122,4 +156,3 @@ Typescript React Express FullStack App
     "module": "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
     // ...
    ```
-   

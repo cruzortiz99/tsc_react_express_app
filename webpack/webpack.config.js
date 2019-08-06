@@ -47,8 +47,12 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true,
-              importLoaders: 1
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]__[hash:base64]'
+              },
+              importLoaders: 0,
+              localsConvention: 'camelCase'
             }
           }
         ]
