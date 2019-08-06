@@ -1,14 +1,14 @@
-.app-menu-item {
+.item {
   list-style: none;
 }
-.app-menu-item-sublevel {
+.item-sublevel {
   text-transform: capitalize;
   text-decoration: none;
 }
-.app-menu-item-clicked {
+.item-clicked {
   background-color: var(--brand-color);
 }
-.app-menu-item-clicked::before {
+.item-clicked::before {
   content: '';
   margin-right: 5px;
   border-left: rgb(80, 80, 80) calc(var(--font-size) / 4) solid;
@@ -24,14 +24,14 @@
   animation-timing-function: linear;
   animation-fill-mode: both;
 }
-.app-menu-item-hover:hover {
+.item-hover:hover {
   background-color: var(--brand-color);
 }
-.app-menu-item-first-level {
+.item-first-level {
   text-transform: uppercase;
   text-decoration: none;
 }
-.app-menu-item-first-level li {
+.item-first-level li {
   font-family: 'Fredoka One', cursive;
 }
 @keyframes fade {

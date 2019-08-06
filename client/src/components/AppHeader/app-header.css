@@ -1,6 +1,6 @@
-.app-header-uppercase {
+.uppercase {
   text-transform: uppercase;
 }
-.app-header-capitalize {
+.capitalize {
   text-transform: capitalize;
 }

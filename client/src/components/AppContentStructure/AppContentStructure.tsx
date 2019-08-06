@@ -1,6 +1,6 @@
 import React from 'react'
 import AppHeader from '../AppHeader/AppHeader'
-import './app-content-structure.css'
+import classes from './app-content-structure.css'
 import { RouteComponentProps } from 'react-router'
 import AppButton from '../AppButton/AppButton'
 export interface AppContentStructureProps extends RouteComponentProps {
@@ -23,7 +23,7 @@ const AppContentStructure = (props: AppContentStructureProps) => {
     <React.Fragment>
       <AppHeader text={props.title} />
       {props.children}
-      <div className="app-content-nav-buttons-section">
+      <div className={classes.buttonsSection}>
         {prevRoute}
         {nextRoute}
       </div>

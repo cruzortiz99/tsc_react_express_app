@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect } from 'react'
-import './app-content-example.css'
+import classes from './app-content-example.css'
 
 export interface AppContentExampleProps {
   boxName?: string
@@ -8,11 +8,11 @@ export interface AppContentExampleProps {
 
 const AppContentExample = (props: AppContentExampleProps) => {
   const hasName = props.boxName ? (
-    <div className="app-content-example-box-title">{props.boxName}</div>
+    <div className={classes.boxTitle}>{props.boxName}</div>
   ) : null
   return (
     <React.Fragment>
-      <div className="app-content-example-container">
+      <div className={classes.container}>
         {hasName}
         {props.children}
       </div>

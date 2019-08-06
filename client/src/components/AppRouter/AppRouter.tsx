@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
-import { AppMenuItemProps } from '../AppMenuItem/AppMenuItem'
 import AppMenu, { AppMenuProps } from '../AppMenu/AppMenu'
 import AppHeader from '../AppHeader/AppHeader'
-import './app-router.css'
+import classes from './app-router.css'
 import AppRoute from '../AppRoute/AppRoute'
 
 export interface AppRouterProps {
@@ -36,13 +35,13 @@ const AppRouter = (props: AppRouterProps) => {
   })
   return (
     <React.Fragment>
-      <div className="sidebar">
-        <div className="app-header">
+      <div className={classes.sidebar}>
+        <div className={classes.header}>
           <AppHeader text="JavaScript" />
         </div>
-        <div className="app-menu">{menu}</div>
+        <div className={classes.menu}>{menu}</div>
       </div>
-      <div className="app-content">{pages}</div>
+      <div className={classes.content}>{pages}</div>
     </React.Fragment>
   )
 }

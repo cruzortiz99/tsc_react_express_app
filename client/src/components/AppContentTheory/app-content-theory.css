@@ -1,11 +1,11 @@
-.text-content {
+.text {
   display: grid;
   grid-gap: 10px;
 }
-.text-content li {
+.text li {
   list-style: none;
 }
-.text-content ul li::before {
+.text ul li::before {
   content: '';
   margin-right: 5px;
   border-left: rgb(0, 155, 226) calc(var(--font-size) / 4) solid;
@@ -17,10 +17,10 @@
   height: calc(var(--font-size) / 100);
   text-align: center;
 }
-.text-content ol {
+.text ol {
   counter-reset: li;
 }
-.text-content ol li::before {
+.text ol li::before {
   content: counter(li) '.';
   counter-increment: li;
   margin-right: 4px;
@@ -30,6 +30,6 @@
   width: var(--font-size);
   height: 100%;
 }
-.text-content p::first-letter {
+.text p::first-letter {
   font-size: calc(2 * var(--font-size));
 }

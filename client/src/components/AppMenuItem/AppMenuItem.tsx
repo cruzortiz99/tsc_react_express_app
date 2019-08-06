@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Route, Link } from 'react-router-dom'
-import './app-menu-item.css'
+import classes from './app-menu-item.css'
 import { RouteChildrenProps } from 'react-router'
 
 export interface AppMenuItemProps {
@@ -12,11 +12,11 @@ export interface AppMenuItemProps {
 const AppMenuItem = (props: AppMenuItemProps) => {
   const level = props.level || 1
   const classNameByLevel =
-    level < 2 ? 'app-menu-item-first-level' : 'app-menu-item-sublevel'
+    level < 2 ? classes.itemFirstLevel : classes.itemSublevel
   const classByMatch = ({ match }: RouteChildrenProps) =>
     match
-      ? 'app-menu-item app-menu-item-clicked'
-      : 'app-menu-item app-menu-item-hover'
+      ? [classes.item, classes.itemClicked].join(' ')
+      : [classes.item, classes.itemHover].join(' ')
   return (
     <Route
       path={props.link}

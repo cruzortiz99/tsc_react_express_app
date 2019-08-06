@@ -1,4 +1,4 @@
-.app-content-example-container {
+.container {
   margin: var(--page-content-vertical-gap) 0px;
   min-height: 200px;
   height: auto;
@@ -10,7 +10,7 @@
   border: var(--general-purpose-border);
   position: relative;
 }
-.app-content-example-box-title {
+.box-title {
   --inside-font-size: calc(1.3 * var(--font-size));
   position: absolute;
   top: calc(var(--inside-font-size) / -1.5);
@@ -28,7 +28,7 @@
   transition-timing-function: ease-out;
 }
 
-.app-content-example-container:hover .app-content-example-box-title {
+.container:hover .box-title {
   font-size: var(--font-size);
   top: calc(var(--inside-font-size) / -0.9);
 }
