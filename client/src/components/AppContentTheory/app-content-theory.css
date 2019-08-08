@@ -1,6 +1,6 @@
 .text {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: var(--page-content-vertical-gap);
 }
 .text li {
   list-style: none;
@@ -32,4 +32,15 @@
 }
 .text p::first-letter {
   font-size: calc(2 * var(--font-size));
+}
+.text p::after {
+  content: '.';
+}
+.text h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 15px 0px 10px 0px;
 }
