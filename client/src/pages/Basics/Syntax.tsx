@@ -14,13 +14,13 @@ export default (props: AppPagesProps) => {
           el caso de C/C++ o Java
         </p>
         <AppContentCode type="js">
-          {`var a = 2;\nvar b = 3.2;\nvar c = 3.3333333333333;`}
+          {'var a = 2;\nvar b = 3.2;\nvar c = 3.3333333333333;'}
         </AppContentCode>
       </AppContentTheory>
       <AppContentTheory title="Text">
         <p>
-          Las cadenas de texto, se representan entre comillas dobles (") o
-          comillas simples ('). No existe un tipo <i>char</i> como en lenguajes
+          Las cadenas de texto, se representan entre comillas dobles (&quot) o
+          comillas simples (&apos). No existe un tipo <i>char</i> como en lenguajes
           como C/C++ o Java, en donde las comillas simples son usadas para este
           tipo de elementos
         </p>
@@ -29,7 +29,7 @@ export default (props: AppPagesProps) => {
           cadenas de textos
         </p>
         <AppContentCode type="js">
-          {`var a = 'hola mundo';// Recomendado por convención\nvar b = "hola mundo";`}
+          {`var a = ${'hola mundo'};// Recomendado por convención\nvar b = "hola mundo";`}
         </AppContentCode>
       </AppContentTheory>
       <AppContentTheory title="Variables">
@@ -46,7 +46,7 @@ export default (props: AppPagesProps) => {
           el alcance o contexto de la variable
         </p>
         <AppContentCode type="js">
-          {`var a = 'hola mundo';\nvar b = 52;\nc = 'hola'; // no recomendado`}
+          {`var a = ${'hola mundo'};\nvar b = 52;\nc = 'hola'; // no recomendado`}
         </AppContentCode>
       </AppContentTheory>
       <AppContentTheory title="Operadores">

@@ -38,18 +38,15 @@ export default [
       {
         path: '/basics/comments',
         name: 'comentarios',
-        component: (props: AppPagesProps) => (
+        component: () => (
           <Comments
-            prevRoute="/basics/syntax"
-            nextRoute="/basics/statements"
-            {...props}
           />
         )
       },
       {
         path: '/basics/operations',
         name: 'operaciones',
-        component: (props: AppPagesProps) => <Operations />
+        component: () => <Operations />
       },
       {
         path: '/basics/variables',

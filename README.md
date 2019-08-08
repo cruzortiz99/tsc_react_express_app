@@ -156,3 +156,66 @@ Typescript React Express FullStack App
     "module": "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
     // ...
    ```
+
+2. ## Typescript y Express
+3. ## Prettier y eslint con Typescript y React
+
+   3.1. Install the next dependencies
+
+```json
+//..
+  "eslint-plugin-react": "^7.14.3",
+  "eslint-config-prettier": "^6.0.0",
+  "eslint-plugin-prettier": "^3.1.0",
+  "prettier": "^1.18.2",
+  "@typescript-eslint/eslint-plugin": "^1.13.0",
+  "@typescript-eslint/parser": "^1.13.0"
+//...
+```
+
+3.2. Setup the .eslintrc file
+
+```json
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "no-console": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/display-name": "off"
+  }
+}
+// ...
+```
+
+3.3. Setup the .prettierrc file
+
+```json
+{
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "none",
+  "tabWidth": 2
+}
+```

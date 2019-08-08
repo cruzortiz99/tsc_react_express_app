@@ -4,24 +4,24 @@ export interface AppContentCodeProps {
   type: 'css' | 'js' | 'html' | string
   children?: string
 }
-const AppContentCode = (props: AppContentCodeProps) => {
+export default (props: AppContentCodeProps) => {
   const codeColor = (
     type: 'css' | 'js' | 'html' | string,
     basicClassName: string
   ) => {
     let className: [string, string] | [] = []
     switch (type) {
-      case 'css':
-        className = [basicClassName, classes.css]
-        break
-      case 'js':
-        className = [basicClassName, classes.js]
-        break
-      case 'html':
-        className = [basicClassName, classes.html]
-        break
-      default:
-        className = [basicClassName, classes.default]
+    case 'css':
+      className = [basicClassName, classes.css]
+      break
+    case 'js':
+      className = [basicClassName, classes.js]
+      break
+    case 'html':
+      className = [basicClassName, classes.html]
+      break
+    default:
+      className = [basicClassName, classes.default]
     }
     return className.join(' ')
   }
@@ -36,4 +36,3 @@ const AppContentCode = (props: AppContentCodeProps) => {
     </pre>
   )
 }
-export default AppContentCode

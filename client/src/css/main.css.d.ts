@@ -1,7 +1,7 @@
 declare module '*.css' {
-  interface IClassName {
+  interface ClassName {
     [className: string]: string
   }
-  const className: IClassName
+  const className: ClassName
   export = className
 }

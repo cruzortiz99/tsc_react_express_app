@@ -1,8 +1,7 @@
 import React from 'react'
 import classes from './app-button.css'
-export interface AppButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-const AppButton = (props: AppButtonProps) => {
+
+export default (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button
       className={props.className || classes.button}
@@ -12,5 +11,3 @@ const AppButton = (props: AppButtonProps) => {
     </button>
   )
 }
-
-export default AppButton

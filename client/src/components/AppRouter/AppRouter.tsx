@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import AppMenu, { AppMenuProps } from '../AppMenu/AppMenu'
 import AppHeader from '../AppHeader/AppHeader'
 import classes from './app-router.css'
 import AppRoute from '../AppRoute/AppRoute'
 
 export interface AppRouterProps {
-  options: Array<AppMenuProps>
+  options: AppMenuProps[]
 }
 
 const AppRouter = (props: AppRouterProps) => {
-  const pages: Array<React.ReactNode> = []
+  const pages: React.ReactNode[] = []
   const menu = props.options.map((menuOption, key) => {
     if (menuOption.component) {
       pages.push(

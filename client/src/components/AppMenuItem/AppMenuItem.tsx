@@ -21,7 +21,8 @@ const AppMenuItem = (props: AppMenuItemProps) => {
     <Route
       path={props.link}
       exact
-      children={(childrenProps) => {
+    >
+      {(childrenProps) => {
         return (
           <Link className={classNameByLevel} to={props.link}>
             <li
@@ -33,7 +34,7 @@ const AppMenuItem = (props: AppMenuItemProps) => {
           </Link>
         )
       }}
-    />
+    </Route>
   )
 }
 export default AppMenuItem
