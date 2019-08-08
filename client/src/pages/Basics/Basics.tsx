@@ -5,7 +5,7 @@ import AppContentExample from '../../components/AppContentExample/AppContentExam
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import { AppPagesProps } from '../AppPages'
 
-const Introduction = (props: AppPagesProps) => {
+export default (props: AppPagesProps) => {
   const [displayHolaMundo, setDisplayHolaMundo] = useState('none')
   const title = 'Introducción'
   const paragraphs = (
@@ -78,4 +78,3 @@ const Introduction = (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
-export default Introduction

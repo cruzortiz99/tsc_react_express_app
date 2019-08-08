@@ -1,6 +1,23 @@
 import React from 'react'
 import { AppPagesProps } from '../pages/AppPages'
-import { Basics, Syntax, Comments } from '../pages/Basics/index'
+import {
+  Basics,
+  Syntax,
+  Comments,
+  Operations,
+  Variables,
+  Hoisting,
+  Scopes,
+  ArrowFunctions,
+  Conditions,
+  ForLoops,
+  Functions,
+  IfElses,
+  Loops,
+  RecursiveFunctions,
+  SwitchCases,
+  WhileLoops
+} from '../pages/Basics/index'
 const Medium = React.lazy(() => import('../pages/Medium/Medium'))
 const Advance = React.lazy(() => import('../pages/Advance/Advance'))
 export default [
@@ -13,14 +30,14 @@ export default [
     routes: [
       {
         path: '/basics/syntax',
-        name: 'syntax',
+        name: 'sintaxis',
         component: (props: AppPagesProps) => (
           <Syntax prevRoute="/" nextRoute="/basics/comments" {...props} />
         )
       },
       {
         path: '/basics/comments',
-        name: 'comments',
+        name: 'comentarios',
         component: (props: AppPagesProps) => (
           <Comments
             prevRoute="/basics/syntax"
@@ -31,74 +48,74 @@ export default [
       },
       {
         path: '/basics/operations',
-        name: 'operations',
-        component: () => <h1>Operations</h1>
+        name: 'operaciones',
+        component: (props: AppPagesProps) => <Operations />
       },
       {
         path: '/basics/variables',
         name: 'variables',
-        component: () => <h1>Variables</h1>,
+        component: () => <Variables />,
         routes: [
           {
             path: '/basics/variables/scopes',
             name: 'scopes',
-            component: () => <h1>Scopes</h1>
+            component: () => <Scopes />
           },
           {
             path: '/basics/variables/hoisting',
             name: 'hoisting',
-            component: () => <h1>Hoisting</h1>
+            component: () => <Hoisting />
           }
         ]
       },
       {
         path: '/basics/functions',
         name: 'funciones',
-        component: () => <h1>Functions</h1>,
+        component: () => <Functions />,
         routes: [
           {
             path: '/basics/functions/arrow-functions',
             name: 'arrow functions',
-            component: () => <h1>Arrow Functions</h1>
+            component: () => <ArrowFunctions />
           }
         ]
       },
       {
         path: '/basics/conditions',
         name: 'condicionales',
-        component: () => <h1>Conditions</h1>,
+        component: () => <Conditions />,
         routes: [
           {
             path: '/basics/conditions/if-else',
             name: 'if-else',
-            component: () => <h1>If Else</h1>
+            component: () => <IfElses />
           },
           {
             path: '/basics/conditions/switches',
             name: 'switches',
-            component: () => <h1>Switches</h1>
+            component: () => <SwitchCases />
           }
         ]
       },
       {
         path: '/basics/loops',
         name: 'ciclos',
-        component: () => <h1>Ciclos</h1>,
+        component: () => <Loops />,
         routes: [
           {
             path: '/basics/loops/for',
             name: 'for',
-            component: () => <h1>For loop</h1>
+            component: () => <ForLoops />
           },
           {
             path: '/basics/loops/while',
             name: 'while',
-            component: () => <h1>While loop</h1>
+            component: () => <WhileLoops />
           },
           {
             path: '/basics/loops/recursive-functions',
             name: 'recursive functions',
-            component: () => <h1>Recursive</h1>
+            component: () => <RecursiveFunctions />
           }
         ]
       }

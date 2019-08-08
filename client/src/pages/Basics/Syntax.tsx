@@ -4,10 +4,10 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-const SyntaxJs = (props: AppPagesProps) => {
+export default (props: AppPagesProps) => {
   return (
-    <AppContentStructure title="Syntax" {...props}>
-      <AppContentTheory title="Numbers">
+    <AppContentStructure title="Sintaxis" {...props}>
+      <AppContentTheory title="Números">
         <p>
           Los números son representados de manera dinámica. JavaScript no posee
           separación de los tipos de números (int, long, float, double), como es
@@ -17,7 +17,7 @@ const SyntaxJs = (props: AppPagesProps) => {
           {`var a = 2;\nvar b = 3.2;\nvar c = 3.3333333333333;`}
         </AppContentCode>
       </AppContentTheory>
-      <AppContentTheory title="Strings">
+      <AppContentTheory title="Text">
         <p>
           Las cadenas de texto, se representan entre comillas dobles (") o
           comillas simples ('). No existe un tipo <i>char</i> como en lenguajes
@@ -149,4 +149,3 @@ const SyntaxJs = (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
-export default SyntaxJs
