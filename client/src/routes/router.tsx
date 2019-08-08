@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppPagesProps } from '../pages/AppPages'
-import { Basics, Syntax } from '../pages/Basics/index'
+import { Basics, Syntax, Comments } from '../pages/Basics/index'
 const Medium = React.lazy(() => import('../pages/Medium/Medium'))
 const Advance = React.lazy(() => import('../pages/Advance/Advance'))
 export default [
@@ -21,12 +21,13 @@ export default [
       {
         path: '/basics/comments',
         name: 'comments',
-        component: () => <h1>Comments</h1>
-      },
-      {
-        path: '/basics/statements',
-        name: 'statements',
-        component: () => <h1>Statements</h1>
+        component: (props: AppPagesProps) => (
+          <Comments
+            prevRoute="/basics/syntax"
+            nextRoute="/basics/statements"
+            {...props}
+          />
+        )
       },
       {
         path: '/basics/operations',

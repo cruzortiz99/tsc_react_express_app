@@ -4,7 +4,7 @@ import { useState } from 'react'
 import AppRouter from './components/AppRouter/AppRouter'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './css/main.css'
-import menu from './content/menu'
+import menu from './routes/router'
 
 const App = () => {
   /* Using react hook to set the state of a functional component */

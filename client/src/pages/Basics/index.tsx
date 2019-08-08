@@ -10,3 +10,4 @@ const importComponentWithDelay = (componentPath: string, delay: number) =>
 
 export const Basics = importComponentWithDelay('./Basics', 5000)
 export const Syntax = React.lazy(() => import('./Syntax'))
+export const Comments = React.lazy(() => import('./Comment'))
