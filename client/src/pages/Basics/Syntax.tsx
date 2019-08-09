@@ -6,33 +6,33 @@ import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
 export default (props: AppPagesProps) => {
   return (
-    <AppContentStructure title="Sintaxis" {...props}>
-      <AppContentTheory title="Números">
+    <AppContentStructure title='Sintaxis' {...props}>
+      <AppContentTheory title='Números'>
         <p>
           Los números son representados de manera dinámica. JavaScript no posee
           separación de los tipos de números (int, long, float, double), como es
           el caso de C/C++ o Java
         </p>
-        <AppContentCode type="js">
+        <AppContentCode type='js'>
           {'var a = 2;\nvar b = 3.2;\nvar c = 3.3333333333333;'}
         </AppContentCode>
       </AppContentTheory>
-      <AppContentTheory title="Text">
+      <AppContentTheory title='Text'>
         <p>
           Las cadenas de texto, se representan entre comillas dobles (&quot) o
-          comillas simples (&apos). No existe un tipo <i>char</i> como en lenguajes
-          como C/C++ o Java, en donde las comillas simples son usadas para este
-          tipo de elementos
+          comillas simples (&apos). No existe un tipo <i>char</i> como en
+          lenguajes como C/C++ o Java, en donde las comillas simples son usadas
+          para este tipo de elementos
         </p>
         <p>
           Por convención se usan las comillas simples para representar las
           cadenas de textos
         </p>
-        <AppContentCode type="js">
+        <AppContentCode type='js'>
           {`var a = ${'hola mundo'};// Recomendado por convención\nvar b = "hola mundo";`}
         </AppContentCode>
       </AppContentTheory>
-      <AppContentTheory title="Variables">
+      <AppContentTheory title='Variables'>
         <p>
           Las variables son espacios de memoria, que utiliza un programa para
           guardar de manera momentánea un valor o una referencia (objetos y
@@ -45,11 +45,11 @@ export default (props: AppPagesProps) => {
           palabra clave, esto es una mala práctica, siempre se debe tener claro
           el alcance o contexto de la variable
         </p>
-        <AppContentCode type="js">
+        <AppContentCode type='js'>
           {`var a = ${'hola mundo'};\nvar b = 52;\nc = 'hola'; // no recomendado`}
         </AppContentCode>
       </AppContentTheory>
-      <AppContentTheory title="Operadores">
+      <AppContentTheory title='Operadores'>
         <p>Los operadores son parecidos a los usados en C/C++ o Java</p>
         <ul>
           Matemáticos:
@@ -80,7 +80,7 @@ export default (props: AppPagesProps) => {
           </li>
         </ul>
       </AppContentTheory>
-      <AppContentTheory title="Palabras Claves">
+      <AppContentTheory title='Palabras Claves'>
         <p>
           JavaScript al igual que los demás lenguajes de programación poseen
           palabras claves que hacen posible la interpretación del archivo a
@@ -135,7 +135,7 @@ export default (props: AppPagesProps) => {
           </tr>
         </table>
       </AppContentTheory>
-      <AppContentTheory title="JavaScript y Camel Case">
+      <AppContentTheory title='JavaScript y Camel Case'>
         <p>
           Por convención los lenguajes de programación tienen maneras de
           escribir o nombrar las variables, funciones, paquetes o módulos

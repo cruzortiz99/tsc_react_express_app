@@ -32,12 +32,12 @@ export default (props: AppPagesProps) => {
     </AppContentTheory>
   )
   const example = (
-    <AppContentExample boxName="Ejemplo">
+    <AppContentExample boxName='Ejemplo'>
       <div>
         <p style={{ display: displayHolaMundo }}>Hola Mundo</p>
         <button
           onClick={() => {
-            setDisplayHolaMundo((prevState) => {
+            setDisplayHolaMundo(prevState => {
               return prevState === 'none' ? 'block' : 'none'
             })
           }}
@@ -48,7 +48,7 @@ export default (props: AppPagesProps) => {
     </AppContentExample>
   )
   const codeJs = (
-    <AppContentCode type="js">
+    <AppContentCode type='js'>
       {`function showParagraph () {
     var paragraph = document.getElementById('paragraph')
     var currentDisplayValue =  paragraph.style.display
@@ -59,7 +59,7 @@ export default (props: AppPagesProps) => {
     </AppContentCode>
   )
   const codeHtml = (
-    <AppContentCode type="html">
+    <AppContentCode type='html'>
       {`<p id="paragraph" style="{display: 'none'}"> Hola Mundo </p>'
 <button id="button" on-click="showParagraph()"> Mostrar </button>`}
     </AppContentCode>

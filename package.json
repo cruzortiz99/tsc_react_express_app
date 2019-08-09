@@ -4,11 +4,13 @@
   "description": "TypeScript React Express app to training",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack/webpack.config.js",
+    "dev": "npm run lint:fix && npm run format:fix && webpack-dev-server --config ./webpack/webpack.config.js",
     "build": "webpack --config ./webpack/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint './client/src/**/*.{ts,tsx}'",
-    "lint:fix": "eslint './client/src/**/*.{ts,tsx}' --fix"
+    "lint:fix": "eslint './client/src/**/*.{ts,tsx}' --fix",
+    "format": "prettier --check './client/src/**/*.{ts,tsx}' --loglevel 'error'",
+    "format:fix": "prettier --write './client/src/**/*.{ts,tsx}' --loglevel 'error'"
   },
   "repository": {
     "type": "git",

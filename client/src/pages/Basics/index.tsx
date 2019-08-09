@@ -4,7 +4,7 @@ const importComponentWithDelay = (componentPath: string, delay: number) =>
   React.lazy(() =>
     Promise.all([
       import(`${componentPath}`),
-      new Promise((resolve) => setTimeout(resolve, delay))
+      new Promise(resolve => setTimeout(resolve, delay))
     ]).then(([moduleExports]) => moduleExports)
   )
 

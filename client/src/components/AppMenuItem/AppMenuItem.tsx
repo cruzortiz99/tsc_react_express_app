@@ -18,11 +18,8 @@ const AppMenuItem = (props: AppMenuItemProps) => {
       ? [classes.item, classes.itemClicked].join(' ')
       : [classes.item, classes.itemHover].join(' ')
   return (
-    <Route
-      path={props.link}
-      exact
-    >
-      {(childrenProps) => {
+    <Route path={props.link} exact>
+      {childrenProps => {
         return (
           <Link className={classNameByLevel} to={props.link}>
             <li

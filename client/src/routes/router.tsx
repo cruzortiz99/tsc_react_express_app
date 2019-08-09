@@ -25,27 +25,37 @@ export default [
     name: 'básico',
     path: '/',
     component: (props: AppPagesProps) => (
-      <Basics prevRoute="/" nextRoute="/basics/syntax" {...props} />
+      <Basics prevRoute='/' nextRoute='/basics/syntax' {...props} />
     ),
     routes: [
       {
         path: '/basics/syntax',
         name: 'sintaxis',
         component: (props: AppPagesProps) => (
-          <Syntax prevRoute="/" nextRoute="/basics/comments" {...props} />
+          <Syntax prevRoute='/' nextRoute='/basics/comments' {...props} />
         )
       },
       {
         path: '/basics/comments',
         name: 'comentarios',
-        component: (props:AppPagesProps) => (
-          <Comments prevRoute="/basics/syntax" nextRoute="/basics/operations" {...props}/>
+        component: (props: AppPagesProps) => (
+          <Comments
+            prevRoute='/basics/syntax'
+            nextRoute='/basics/operations'
+            {...props}
+          />
         )
       },
       {
         path: '/basics/operations',
         name: 'operaciones',
-        component: () => <Operations />
+        component: (props: AppPagesProps) => (
+          <Operations
+            prevRoute='/basics/comments'
+            nextRoute='/basics/variables'
+            {...props}
+          />
+        )
       },
       {
         path: '/basics/variables',

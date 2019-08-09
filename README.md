@@ -179,18 +179,14 @@ Typescript React Express FullStack App
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
   "env": {
     "browser": true,
     "es6": true
-  },
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 2019,
@@ -203,9 +199,16 @@ Typescript React Express FullStack App
     "semi": ["error", "never"],
     "no-console": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "prettier/prettier": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
+
 // ...
 ```
 
@@ -216,6 +219,21 @@ Typescript React Express FullStack App
   "singleQuote": true,
   "semi": false,
   "trailingComma": "none",
-  "tabWidth": 2
+  "tabWidth": 2,
+  "jsxSingleQuote": true
 }
+```
+
+3.4. Setup the scripts
+
+```json
+// ...
+    "dev": "npm run lint:fix && npm run format:fix && webpack-dev-server --config ./webpack/webpack.config.js",
+    "build": "webpack --config ./webpack/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint './client/src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint './client/src/**/*.{ts,tsx}' --fix",
+    "format": "prettier --check './client/src/**/*.{ts,tsx}' --loglevel 'error'",
+    "format:fix": "prettier --write './client/src/**/*.{ts,tsx}' --loglevel 'error'"
+// ...
 ```

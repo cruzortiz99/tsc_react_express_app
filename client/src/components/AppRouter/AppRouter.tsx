@@ -37,7 +37,7 @@ const AppRouter = (props: AppRouterProps) => {
     <React.Fragment>
       <div className={classes.sidebar}>
         <div className={classes.header}>
-          <AppHeader text="JavaScript" />
+          <AppHeader text='JavaScript' />
         </div>
         <div className={classes.menu}>{menu}</div>
       </div>

@@ -11,17 +11,17 @@ export default (props: AppContentCodeProps) => {
   ) => {
     let className: [string, string] | [] = []
     switch (type) {
-    case 'css':
-      className = [basicClassName, classes.css]
-      break
-    case 'js':
-      className = [basicClassName, classes.js]
-      break
-    case 'html':
-      className = [basicClassName, classes.html]
-      break
-    default:
-      className = [basicClassName, classes.default]
+      case 'css':
+        className = [basicClassName, classes.css]
+        break
+      case 'js':
+        className = [basicClassName, classes.js]
+        break
+      case 'html':
+        className = [basicClassName, classes.html]
+        break
+      default:
+        className = [basicClassName, classes.default]
     }
     return className.join(' ')
   }
