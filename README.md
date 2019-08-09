@@ -194,13 +194,13 @@ Typescript React Express FullStack App
   },
   "plugins": ["prettier", "@typescript-eslint"],
   "rules": {
-    "indent": ["error", 2],
+    "indent": "off",
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
     "no-console": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/display-name": "off",
-    "prettier/prettier": "off"
+    "prettier/prettier": "error"
   },
   "settings": {
     "react": {
@@ -208,7 +208,6 @@ Typescript React Express FullStack App
     }
   }
 }
-
 // ...
 ```
 
@@ -228,12 +227,10 @@ Typescript React Express FullStack App
 
 ```json
 // ...
-    "dev": "npm run lint:fix && npm run format:fix && webpack-dev-server --config ./webpack/webpack.config.js",
+    "dev": "npm run format:fix && webpack-dev-server --config ./webpack/webpack.config.js",
     "build": "webpack --config ./webpack/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint './client/src/**/*.{ts,tsx}'",
-    "lint:fix": "eslint './client/src/**/*.{ts,tsx}' --fix",
-    "format": "prettier --check './client/src/**/*.{ts,tsx}' --loglevel 'error'",
-    "format:fix": "prettier --write './client/src/**/*.{ts,tsx}' --loglevel 'error'"
+    "format": "eslint './client/src/**/*.{ts,tsx}' && prettier --check './client/src/**/*.{ts,tsx}' --loglevel 'error'",
+    "format:fix": "eslint './client/src/**/*.{ts,tsx}' --fix && prettier --write './client/src/**/*.{ts,tsx}' --loglevel 'error'"
 // ...
 ```
