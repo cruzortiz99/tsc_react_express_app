@@ -1,18 +1,14 @@
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
   "env": {
     "browser": true,
     "es6": true
-  },
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 2019,
@@ -25,6 +21,12 @@
     "semi": ["error", "never"],
     "no-console": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "prettier/prettier": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
