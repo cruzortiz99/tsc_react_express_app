@@ -45,6 +45,7 @@ h6 {
 }
 h1 {
   font-size: calc(1.6 * var(--font-size));
+  margin-bottom: 20px;
 }
 h2 {
   font-size: calc(1.4 * var(--font-size));
