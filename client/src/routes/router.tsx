@@ -60,17 +60,35 @@ export default [
       {
         path: '/basics/variables',
         name: 'variables',
-        component: (props: AppPagesProps) => <Variables prevRoute='/basics/operations' nextRoute='/basics/variables/scopes' {...props}  />,
+        component: (props: AppPagesProps) => (
+          <Variables
+            prevRoute='/basics/operations'
+            nextRoute='/basics/variables/scopes'
+            {...props}
+          />
+        ),
         routes: [
           {
             path: '/basics/variables/scopes',
             name: 'scopes',
-            component: (props: AppPagesProps) => <Scopes prevRoute='/basics/variables' nextRoute='/basics/variables/hoisting' {...props} />
+            component: (props: AppPagesProps) => (
+              <Scopes
+                prevRoute='/basics/variables'
+                nextRoute='/basics/variables/hoisting'
+                {...props}
+              />
+            )
           },
           {
             path: '/basics/variables/hoisting',
             name: 'hoisting',
-            component: () => <Hoisting />
+            component: (props: AppPagesProps) => (
+              <Hoisting
+                prevRoute='/basics/variables/scopes'
+                nextRoute='/basics/functions'
+                {...props}
+              />
+            )
           }
         ]
       },
