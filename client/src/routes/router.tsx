@@ -60,12 +60,12 @@ export default [
       {
         path: '/basics/variables',
         name: 'variables',
-        component: () => <Variables />,
+        component: (props: AppPagesProps) => <Variables prevRoute='/basics/operations' nextRoute='/basics/variables/scopes' {...props}  />,
         routes: [
           {
             path: '/basics/variables/scopes',
             name: 'scopes',
-            component: () => <Scopes />
+            component: (props: AppPagesProps) => <Scopes prevRoute='/basics/variables' nextRoute='/basics/variables/hoisting' {...props} />
           },
           {
             path: '/basics/variables/hoisting',
