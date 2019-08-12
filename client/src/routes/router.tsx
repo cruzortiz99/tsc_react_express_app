@@ -95,12 +95,24 @@ export default [
       {
         path: '/basics/functions',
         name: 'funciones',
-        component: () => <Functions />,
+        component: (props: AppPagesProps) => (
+          <Functions
+            prevRoute='/basics/variables/hoisting'
+            nextRoute='/basics/functions/arrow-functions'
+            {...props}
+          />
+        ),
         routes: [
           {
             path: '/basics/functions/arrow-functions',
             name: 'arrow functions',
-            component: () => <ArrowFunctions />
+            component: (props: AppPagesProps) => (
+              <ArrowFunctions
+                prevRoute='/basics/functions'
+                nextRoute='/basics/functions/conditions'
+                {...props}
+              />
+            )
           }
         ]
       },
