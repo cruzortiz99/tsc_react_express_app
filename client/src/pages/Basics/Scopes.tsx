@@ -2,7 +2,7 @@ import React from 'react'
 import { AppPagesProps } from '../AppPages'
 import AppContentStructure from '../../components/AppContentStructure/AppContentStructure'
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
-import AppContentCode from '../../components/AppContentCode/AppContentCode';
+import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
 export default (props: AppPagesProps) => {
   return <AppContentStructure title='Alcance de las variables' {...props}>
