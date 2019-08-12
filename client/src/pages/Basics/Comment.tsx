@@ -20,6 +20,10 @@ export default (props: AppPagesProps) => {
           que el código debería ser lo suficientemente expresivo para requerir
           la menor cantidad de comentario.
         </p>
+        <p>
+          Los comentarios del código se pueden realizar con doble slash (//) o
+          con slash y asterísco (/* */)
+        </p>
         <AppContentCode type='js'>
           {
             '// Esto es una función de suma\nfunction x (a, b) { \n return a+b; \n}'
