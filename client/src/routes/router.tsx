@@ -109,7 +109,7 @@ export default [
             component: (props: AppPagesProps) => (
               <ArrowFunctions
                 prevRoute='/basics/functions'
-                nextRoute='/basics/functions/conditions'
+                nextRoute='/basics/conditions'
                 {...props}
               />
             )
