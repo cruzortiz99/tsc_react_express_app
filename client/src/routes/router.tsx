@@ -119,39 +119,81 @@ export default [
       {
         path: '/basics/conditions',
         name: 'condicionales',
-        component: () => <Conditions />,
+        component: (props: AppPagesProps) => (
+          <Conditions
+            prevRoute='/basics/functions/arrow-functions'
+            nextRoute='/basics/conditions/if-else'
+            {...props}
+          />
+        ),
         routes: [
           {
             path: '/basics/conditions/if-else',
             name: 'if-else',
-            component: () => <IfElses />
+            component: (props: AppPagesProps) => (
+              <IfElses
+                prevRoute='/basics/conditions'
+                nextRoute='/basics/conditions/switches'
+                {...props}
+              />
+            )
           },
           {
             path: '/basics/conditions/switches',
             name: 'switches',
-            component: () => <SwitchCases />
+            component: (props: AppPagesProps) => (
+              <SwitchCases
+                prevRoute='/basics/conditions/if-else'
+                nextRoute='/basics/loops'
+                {...props}
+              />
+            )
           }
         ]
       },
       {
         path: '/basics/loops',
         name: 'ciclos',
-        component: () => <Loops />,
+        component: (props: AppPagesProps) => (
+          <Loops
+            prevRoute='/basics/conditions/switches'
+            nextRoute='/basics/loops/for'
+            {...props}
+          />
+        ),
         routes: [
           {
             path: '/basics/loops/for',
             name: 'for',
-            component: () => <ForLoops />
+            component: (props: AppPagesProps) => (
+              <ForLoops
+                prevRoute='/basics/loops'
+                nextRoute='/basics/loops/while'
+                {...props}
+              />
+            )
           },
           {
             path: '/basics/loops/while',
             name: 'while',
-            component: () => <WhileLoops />
+            component: (props: AppPagesProps) => (
+              <WhileLoops
+                prevRoute='/basics/loops/for'
+                nextRoute='/basics/loops/recursive-functions'
+                {...props}
+              />
+            )
           },
           {
             path: '/basics/loops/recursive-functions',
             name: 'recursive functions',
-            component: () => <RecursiveFunctions />
+            component: (props: AppPagesProps) => (
+              <RecursiveFunctions
+                prevRoute='/basics/loops/while'
+                nextRoute='/intermedio'
+                {...props}
+              />
+            )
           }
         ]
       }

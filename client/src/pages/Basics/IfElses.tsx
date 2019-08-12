@@ -1,3 +1,7 @@
 import React from 'react'
+import { AppPagesProps } from '../AppPages'
+import AppContentStructure from '../../components/AppContentStructure/AppContentStructure'
 
-export default () => <h1>If-Else</h1>
+export default (props: AppPagesProps) => (
+  <AppContentStructure title='If-Else' {...props} />
+)

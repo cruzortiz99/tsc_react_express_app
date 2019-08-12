@@ -1,3 +1,7 @@
 import React from 'react'
+import { AppPagesProps } from '../AppPages'
+import AppContentStructure from '../../components/AppContentStructure/AppContentStructure'
 
-export default () => <h1>Switch-Case</h1>
+export default (props: AppPagesProps) => (
+  <AppContentStructure title='Switch-Case' {...props} />
+)
