@@ -29,7 +29,7 @@ export default (props: AppPagesProps) => (
     <AppContentTheory title='For In'>
       <p>
         En JavaScript existen maneras resumidas (syntax sugar) de escribir los
-        ciclos <strong>for</strong>. Los <strong>For In</strong> sirven para
+        ciclos <strong>for</strong>. Los <strong>for-in</strong> sirven para
         recorrer las características de los objetos
       </p>
     </AppContentTheory>
@@ -38,6 +38,17 @@ export default (props: AppPagesProps) => (
         'var person = {name: "Cruz", apellido: "Ortiz", edad: 27}\nfor (let attr in person) {\n console.log(attr);\n console.log(person[attr]);\n}'
       }
     </AppContentCode>
-    <AppContentTheory title='For of'></AppContentTheory>
+    <AppContentTheory title='For of'>
+      <p>
+        Existe otro <strong>for</strong> que se utiliza para el caso de los
+        elementos iterables como los arreglos, y ese es el
+        <strong> for-of</strong>
+      </p>
+    </AppContentTheory>
+    <AppContentCode type='js'>
+      {
+        'var arreglo = [1, 2, 3];\nfor (let elemento of arreglo) {\n console.log(elemento);\n}'
+      }
+    </AppContentCode>
   </AppContentStructure>
 )
