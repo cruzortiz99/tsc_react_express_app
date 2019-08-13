@@ -36,7 +36,7 @@ export default (props: AppPagesProps) => {
             </tr>
             <tr>
               <td>Multiplicación (*)</td>
-              <td>Not (~)</td>
+              <td>Not (~ o !)</td>
             </tr>
             <tr>
               <td>División (/)</td>
