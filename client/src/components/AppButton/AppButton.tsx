@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './app-button.css'
 
-export default (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
+const AppButton = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button
       className={props.className || classes.button}
@@ -11,3 +11,4 @@ export default (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
     </button>
   )
 }
+export default React.memo(AppButton)

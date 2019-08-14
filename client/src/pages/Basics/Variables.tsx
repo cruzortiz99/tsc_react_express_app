@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 
-export default (props: AppPagesProps) => {
+const VariablesPage = (props: AppPagesProps) => {
   return (
     <AppContentStructure
       nextRoute={props.nextRoute}
@@ -77,3 +77,4 @@ export default (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
+export default React.memo(VariablesPage, () => true)

@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-export default (props: AppPagesProps) => {
+const ScopesPage = (props: AppPagesProps) => {
   return (
     <AppContentStructure title='Alcance de las variables' {...props}>
       <AppContentTheory>
@@ -34,3 +34,4 @@ export default (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
+export default React.memo(ScopesPage, () => true)

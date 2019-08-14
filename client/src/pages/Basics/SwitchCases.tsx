@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-export default (props: AppPagesProps) => (
+const SwitchCasesPage = (props: AppPagesProps) => (
   <AppContentStructure title='Switch-Case' {...props}>
     <AppContentTheory>
       <p>
@@ -33,3 +33,4 @@ export default (props: AppPagesProps) => (
     </AppContentCode>
   </AppContentStructure>
 )
+export default React.memo(SwitchCasesPage, () => true)

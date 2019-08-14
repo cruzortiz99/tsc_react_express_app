@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-export default (props: AppPagesProps) => {
+const OperationsPage = (props: AppPagesProps) => {
   return (
     <AppContentStructure
       title='Operaciones'
@@ -65,3 +65,4 @@ export default (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
+export default React.memo(OperationsPage, () => true)

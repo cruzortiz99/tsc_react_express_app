@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-export default (props: AppPagesProps) => (
+const RecursiveFunctionsPage = (props: AppPagesProps) => (
   <AppContentStructure title='Funciones recursivas' {...props}>
     <AppContentTheory>
       <p>
@@ -31,3 +31,4 @@ export default (props: AppPagesProps) => (
     </AppContentTheory>
   </AppContentStructure>
 )
+export default React.memo(RecursiveFunctionsPage, () => true)

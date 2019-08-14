@@ -25,4 +25,4 @@ const AppContentTheory = (props: AppContentTheoryProps) => {
   )
 }
 
-export default AppContentTheory
+export default React.memo(AppContentTheory, () => true)

@@ -38,4 +38,4 @@ const AppRoute = (props: AppRouteProps) => {
   )
 }
 
-export default AppRoute
+export default React.memo(AppRoute, () => true)

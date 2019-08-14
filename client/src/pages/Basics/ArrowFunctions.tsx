@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-export default (props: AppPagesProps) => {
+const ArrowFunctionsPage = (props: AppPagesProps) => {
   return (
     <AppContentStructure title='Funciones Arrow o Flecha' {...props}>
       <AppContentTheory>
@@ -49,3 +49,5 @@ export default (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
+
+export default React.memo(ArrowFunctionsPage, () => true)

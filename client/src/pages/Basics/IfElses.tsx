@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-export default (props: AppPagesProps) => (
+const IfElsesPage = (props: AppPagesProps) => (
   <AppContentStructure title='If-Else' {...props}>
     <AppContentTheory>
       <p>
@@ -26,3 +26,4 @@ export default (props: AppPagesProps) => (
     </AppContentCode>
   </AppContentStructure>
 )
+export default React.memo(IfElsesPage, () => true)

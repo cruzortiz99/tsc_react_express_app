@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-export default (props: AppPagesProps) => {
+const SyntaxPage = (props: AppPagesProps) => {
   return (
     <AppContentStructure title='Sintaxis' {...props}>
       <AppContentTheory title='Números'>
@@ -151,3 +151,4 @@ export default (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
+export default React.memo(SyntaxPage, () => true)

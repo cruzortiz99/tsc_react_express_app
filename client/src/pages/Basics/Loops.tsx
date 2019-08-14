@@ -3,7 +3,7 @@ import { AppPagesProps } from '../AppPages'
 import AppContentStructure from '../../components/AppContentStructure/AppContentStructure'
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 
-export default (props: AppPagesProps) => (
+const LoopsPage = (props: AppPagesProps) => (
   <AppContentStructure title='Ciclos' {...props}>
     <AppContentTheory>
       <p>
@@ -24,3 +24,4 @@ export default (props: AppPagesProps) => (
     </AppContentTheory>
   </AppContentStructure>
 )
+export default React.memo(LoopsPage, () => true)

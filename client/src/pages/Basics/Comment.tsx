@@ -4,7 +4,7 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 
-export default (props: AppPagesProps) => {
+const CommentsPage = (props: AppPagesProps) => {
   return (
     <AppContentStructure
       title='Comentarios'
@@ -36,3 +36,5 @@ export default (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
+
+export default React.memo(CommentsPage, () => true)

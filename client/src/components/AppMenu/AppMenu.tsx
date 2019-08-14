@@ -36,4 +36,4 @@ const AppMenu = (props: AppMenuProps) => {
   )
 }
 
-export default AppMenu
+export default React.memo(AppMenu, () => true)

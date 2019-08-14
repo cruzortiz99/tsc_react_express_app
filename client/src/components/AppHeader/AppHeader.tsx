@@ -16,4 +16,4 @@ const AppHeader = React.memo((props: AppHeaderProps) => {
     props.text
   )
 })
-export default AppHeader
+export default React.memo(AppHeader, () => true)

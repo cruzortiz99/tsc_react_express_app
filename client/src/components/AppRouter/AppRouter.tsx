@@ -45,4 +45,4 @@ const AppRouter = (props: AppRouterProps) => {
     </React.Fragment>
   )
 }
-export default AppRouter
+export default React.memo(AppRouter, () => true)

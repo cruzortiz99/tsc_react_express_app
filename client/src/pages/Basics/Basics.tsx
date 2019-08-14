@@ -5,7 +5,7 @@ import AppContentExample from '../../components/AppContentExample/AppContentExam
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import { AppPagesProps } from '../AppPages'
 
-export default (props: AppPagesProps) => {
+const BasicsPage = (props: AppPagesProps) => {
   const [displayHolaMundo, setDisplayHolaMundo] = useState('none')
   const title = 'Introducción'
   const paragraphs = (
@@ -78,3 +78,4 @@ export default (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
+export default React.memo(BasicsPage, () => true)

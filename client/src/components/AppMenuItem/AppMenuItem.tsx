@@ -34,4 +34,4 @@ const AppMenuItem = (props: AppMenuItemProps) => {
     </Route>
   )
 }
-export default AppMenuItem
+export default React.memo(AppMenuItem, () => true)

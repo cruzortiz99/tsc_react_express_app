@@ -4,7 +4,7 @@ export interface AppContentCodeProps {
   type: 'css' | 'js' | 'html' | string
   children?: string
 }
-export default (props: AppContentCodeProps) => {
+const AppContentCode = (props: AppContentCodeProps) => {
   const codeColor = (
     type: 'css' | 'js' | 'html' | string,
     basicClassName: string
@@ -36,3 +36,5 @@ export default (props: AppContentCodeProps) => {
     </pre>
   )
 }
+
+export default React.memo(AppContentCode, () => true)
