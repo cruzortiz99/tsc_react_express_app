@@ -253,7 +253,16 @@ Typescript React Express FullStack App
 
    ```json
    {
-     "presets": ["@babel/env", "@babel/react", "@babel/typescript"],
+     "presets": [
+       [
+         "@babel/env",
+         {
+           "targets": "> 1%, last 2 versions"
+         }
+       ],
+       "@babel/react",
+       "@babel/typescript"
+     ],
      "plugins": [
        "@babel/proposal-class-properties",
        "@babel/proposal-object-rest-spread"
@@ -279,7 +288,7 @@ Typescript React Express FullStack App
      // ...
    ```
 
-   4.4. Add a browser setup targets `.browserslistrc`
+   4.4. Add a browser setup targets `.browserslistrc`. Optional, if you don't set up this on the `.babelrc`
 
    ```
    last 1 version
