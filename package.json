@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run format && webpack-dev-server --config ./webpack/webpack.config.js",
-    "build": "npm run lint:fix && webpack --config ./webpack/webpack.config.js",
+    "build": "npm run format && webpack --config ./webpack/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint './client/src/**/*.{ts,tsx}'",
-    "lint:fix": "eslint './client/src/**/*.{ts,tsx}' --fix",
+    "type-check": "tsc",
+    "type-check:watch": "tsc --watch",
+    "lint": "npm run type-check && eslint './client/src/**/*.{ts,tsx}'",
+    "lint:fix": "npm run type-check && eslint './client/src/**/*.{ts,tsx}' --fix",
     "format": "npm run lint:fix && prettier --write './client/src/**/*.{ts,tsx}' --loglevel 'error'"
   },
   "repository": {
@@ -35,6 +37,14 @@
     "redux": "^4.0.4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
     "@types/express": "^4.17.0",
     "@types/node": "^12.6.6",
     "@types/react": "^16.8.23",
@@ -43,9 +53,7 @@
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",

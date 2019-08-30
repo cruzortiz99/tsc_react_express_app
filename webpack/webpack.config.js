@@ -19,22 +19,15 @@ module.exports = {
   devtool: 'inline-source.map',
   /* Require to make imports */
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js', 'jsx']
   },
   module: {
     rules: [
       {
         /* Handles js files */
-        test: /\.(js)$/,
+        test: /\.(js|ts)x*$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-      },
-      {
-        /* Handles ts and tsx files */
-        test: /\.(tsx*)$/,
-        use: {
-          loader: 'awesome-typescript-loader'
-        }
       },
       {
         /* Handles CSS files */
