@@ -234,3 +234,54 @@ Typescript React Express FullStack App
     "format:fix": "eslint './client/src/**/*.{ts,tsx}' --fix && prettier --write './client/src/**/*.{ts,tsx}' --loglevel 'error'"
 // ...
 ```
+
+4. ## React Typescript with Babel
+
+   4.1. Install dependencies:
+
+   - @babel/cli
+   - @babel/core
+   - @babel/plugin-proposal-class-properties
+   - @babel/plugin-proposal-numeric-separator
+   - @babel/plugin-proposal-object-rest-spread
+   - @babel/preset-env
+   - @babel/preset-react
+   - @babel/preset-typescript
+   - babel-loader
+
+     4.2. Setup `.babelrc`
+
+   ```json
+   {
+     "presets": ["@babel/env", "@babel/react", "@babel/typescript"],
+     "plugins": [
+       "@babel/proposal-class-properties",
+       "@babel/proposal-object-rest-spread"
+     ]
+   }
+   ```
+
+   4.3. Setup `webpack.config.js`
+
+   ```js
+   // ...
+     resolve: {
+       extensions: ['.ts', '.tsx', '.js', '.jsx']
+     },
+     module: {
+       rules: [
+         {
+           /* Handles js files */
+           test: /\.(js|ts)x*$/,
+           exclude: /node_modules/,
+           use: ['babel-loader']
+         },
+     // ...
+   ```
+
+   4.4. Add a browser setup targets `.browserslistrc`
+
+   ```
+   last 1 version
+   > 1%
+   ```

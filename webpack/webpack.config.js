@@ -10,7 +10,7 @@ module.exports = {
   /* Output point of the bundle */
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '..', 'dist', 'client'),
+    path: path.resolve(__dirname, '..', 'dist'),
     // Makes react router work for subroutes
     publicPath: '/',
     // code splitting
@@ -19,7 +19,7 @@ module.exports = {
   devtool: 'inline-source.map',
   /* Require to make imports */
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', 'jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
   module: {
     rules: [
