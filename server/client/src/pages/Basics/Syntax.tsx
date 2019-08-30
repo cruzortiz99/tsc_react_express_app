@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppPagesProps } from '../AppPages.d'
+import { AppPagesProps } from '../AppPages'
 import AppContentStructure from '../../components/AppContentStructure/AppContentStructure'
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'

@@ -5,12 +5,12 @@ const path = require('path')
 module.exports = {
   /* Entry point for the ui */
   entry: {
-    main: path.resolve(__dirname, '..', 'client', 'src', 'index.tsx')
+    main: path.resolve(__dirname, '..', 'server', 'client', 'src', 'index.tsx')
   },
   /* Output point of the bundle */
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '..', 'dist'),
+    path: path.resolve(__dirname, '..', 'server', 'client', 'dist'),
     // Makes react router work for subroutes
     publicPath: '/',
     // code splitting
@@ -58,7 +58,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '..', 'client', 'index.html')
+      template: path.resolve(__dirname, '..', 'server', 'client', 'index.html')
     })
   ],
   /* Dev server config */

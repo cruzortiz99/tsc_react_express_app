@@ -9,9 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "type-check": "tsc",
     "type-check:watch": "tsc --watch",
-    "lint": "npm run type-check && eslint './client/src/**/*.{ts,tsx}'",
-    "lint:fix": "npm run type-check && eslint './client/src/**/*.{ts,tsx}' --fix",
-    "format": "npm run lint:fix && prettier --write './client/src/**/*.{ts,tsx}' --loglevel 'error'"
+    "lint": "npm run type-check && eslint './server/client/src/**/*.{ts,tsx}'",
+    "lint:fix": "npm run type-check && eslint './server/client/src/**/*.{ts,tsx}' --fix",
+    "format": "npm run lint:fix && prettier --write './server/client/src/**/*.{ts,tsx}' --loglevel 'error'"
   },
   "repository": {
     "type": "git",
