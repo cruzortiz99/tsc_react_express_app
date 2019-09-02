@@ -18,7 +18,7 @@ import {
   SwitchCases,
   WhileLoops
 } from '../pages/Basics/index'
-import { Medium } from '../pages/Medium/index'
+import { Medium, Strings } from '../pages/Medium/index'
 import { Advance } from '../pages/Advance/index'
 export default [
   {
@@ -213,7 +213,13 @@ export default [
       {
         path: '/intermedio/strings',
         name: 'strings',
-        component: () => <h1>Strings</h1>
+        component: (props: AppPagesProps) => (
+          <Strings
+            nextRoute='/intermedio/arrays'
+            prevRoute='/intermedio'
+            {...props}
+          ></Strings>
+        )
       },
       {
         path: '/intermedio/arrays',
