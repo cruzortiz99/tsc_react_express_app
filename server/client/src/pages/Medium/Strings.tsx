@@ -103,9 +103,9 @@ const Strings = (props: AppPagesProps) => {
         </AppContentCode>
         <h3>Trim</h3>
         <p>
-          El método trim, es muy útil ya que permite eliminar los espacios en
-          blanco de una cadena de texto. Elimina los espacios en blanco del
-          inicio y el final de la cadena de texto
+          El método <strong>trim</strong>, es muy útil ya que permite eliminar
+          los espacios en blanco de una cadena de texto. Elimina los espacios en
+          blanco del inicio y el final de la cadena de texto
         </p>
         <h3>Cadenas de texto como Arreglos</h3>
         <p>

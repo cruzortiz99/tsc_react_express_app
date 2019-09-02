@@ -18,8 +18,9 @@ import {
   SwitchCases,
   WhileLoops
 } from '../pages/Basics/index'
-import { Medium, Strings } from '../pages/Medium/index'
+import { Medium, Strings, DatesC, Arrays, Objects } from '../pages/Medium/index'
 import { Advance } from '../pages/Advance/index'
+import MathC from '../pages/Medium/Math'
 export default [
   {
     name: 'básico',
@@ -215,26 +216,55 @@ export default [
         name: 'strings',
         component: (props: AppPagesProps) => (
           <Strings
-            nextRoute='/intermedio/arrays'
+            nextRoute='/intermedio/dates'
             prevRoute='/intermedio'
             {...props}
           ></Strings>
         )
       },
       {
-        path: '/intermedio/arrays',
-        name: 'arrays',
-        component: () => <h1>Arrays</h1>
-      },
-      {
         path: '/intermedio/dates',
         name: 'dates',
-        component: () => <h1>Dates</h1>
+        component: (props: AppPagesProps) => (
+          <DatesC
+            nextRoute='/intermedio/arrays'
+            prevRoute='/intermedio/strings'
+            {...props}
+          />
+        )
+      },
+      {
+        path: '/intermedio/arrays',
+        name: 'arrays',
+        component: (props: AppPagesProps) => (
+          <Arrays
+            nextRoute='/intermedio/objects'
+            prevRoute='/intermedio/dates'
+            {...props}
+          />
+        )
+      },
+      {
+        path: '/intermedio/objects',
+        name: 'objects',
+        component: (props: AppPagesProps) => (
+          <Objects
+            prevRoute='/intermedio/arrays'
+            nextRoute='/intermedio/math'
+            {...props}
+          />
+        )
       },
       {
         path: '/intermedio/math',
         name: 'math',
-        component: () => <h1>Math</h1>
+        component: (props: AppPagesProps) => (
+          <MathC
+            prevRoute='/intermedio/objects'
+            nextRoute='/intermedio/dom-access'
+            {...props}
+          />
+        )
       },
       {
         path: '/intermedio/dom-access',
