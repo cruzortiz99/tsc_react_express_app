@@ -30,4 +30,4 @@ const AppContentStructure = (props: AppContentStructureProps) => {
     </React.Fragment>
   )
 }
-export default React.memo(AppContentStructure, () => true)
+export default AppContentStructure

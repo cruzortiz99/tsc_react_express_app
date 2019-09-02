@@ -20,4 +20,4 @@ const AppContentExample = (props: AppContentExampleProps) => {
   )
 }
 
-export default React.memo(AppContentExample)
+export default AppContentExample

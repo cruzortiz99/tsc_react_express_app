@@ -78,4 +78,4 @@ const BasicsPage = (props: AppPagesProps) => {
     </AppContentStructure>
   )
 }
-export default React.memo(BasicsPage, () => true)
+export default BasicsPage
