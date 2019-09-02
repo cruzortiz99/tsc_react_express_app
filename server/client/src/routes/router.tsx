@@ -18,8 +18,8 @@ import {
   SwitchCases,
   WhileLoops
 } from '../pages/Basics/index'
-const Medium = React.lazy(() => import('../pages/Medium/Medium'))
-const Advance = React.lazy(() => import('../pages/Advance/Advance'))
+import { Medium } from '../pages/Medium/index'
+import { Advance } from '../pages/Advance/index'
 export default [
   {
     name: 'básico',
@@ -202,7 +202,13 @@ export default [
   {
     name: 'intermedio',
     path: '/intermedio',
-    component: () => <Medium />,
+    component: (props: AppPagesProps) => (
+      <Medium
+        prevRoute='/basics/loops/recursive-functions'
+        nextRoute='/intermedio/strings'
+        {...props}
+      />
+    ),
     routes: [
       {
         path: '/intermedio/strings',
@@ -259,7 +265,13 @@ export default [
   {
     name: 'avanzado',
     path: '/avanzado',
-    component: () => <Advance />,
+    component: (props: AppPagesProps) => (
+      <Advance
+        prevRoute='/intermedio/ajax'
+        nextRoute='/avanzado/reactjs'
+        {...props}
+      />
+    ),
     routes: [
       {
         path: '/avanzado/reactjs',
