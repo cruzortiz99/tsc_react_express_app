@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router'
 import { AppPagesProps } from '../../pages/AppPages'
+import AppLoader from '../AppLoader/AppLoader'
 
 export interface AppRouteProps {
   name: string
@@ -30,7 +31,7 @@ const AppRoute = (props: AppRouteProps) => {
       : undefined
   return (
     <React.Fragment>
-      <React.Suspense fallback={<h1>...Loading</h1>}>
+      <React.Suspense fallback={<AppLoader />}>
         <Route path={props.path} exact component={props.component} />
         {subRoutes}
       </React.Suspense>

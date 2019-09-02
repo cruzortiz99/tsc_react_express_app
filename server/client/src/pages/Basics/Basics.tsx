@@ -32,9 +32,9 @@ const BasicsPage = (props: AppPagesProps) => {
       </AppContentExample>
       <AppContentTheory>
         <p>
-          JavaScript es el lenguaje de de la Web, es lo que permite a las
-          paginas webs pasar de ser estáticas a ser páginas dinámicas o
-          aplicaciones webs. Ofrece muchas ventajas aprender javascript:
+          JavaScript es el lenguaje de la Web, es lo que permite a las paginas
+          webs pasar de ser estáticas a ser páginas dinámicas o aplicaciones
+          webs. Ofrece muchas ventajas aprender javascript:
         </p>
         <ul>
           <li>Fácil de aprender</li>
