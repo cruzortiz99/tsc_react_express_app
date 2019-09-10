@@ -102,9 +102,16 @@ const DatesC = (props: AppPagesProps) => {
         <table>
           <thead>
             <tr>
-              <th></th>
+              <th>Método</th>
+              <th>Descripción</th>
             </tr>
           </thead>
+          <tbody>
+            <tr>
+              <td>getFullYear()</td>
+              <td>Obtienes el año de la fecha en cuatro dígitos(yyyy)</td>
+            </tr>
+          </tbody>
         </table>
       </AppContentTheory>
     </AppContentStructure>
