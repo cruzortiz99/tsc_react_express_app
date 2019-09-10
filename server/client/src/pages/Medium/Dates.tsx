@@ -33,6 +33,79 @@ const DatesC = (props: AppPagesProps) => {
           JavaScript cuenta los meses tomando a Enero como el mes 0, por lo
           tanto diciembre es el 11
         </p>
+        <p>Para este constructor las fechas inician desde los 19xx</p>
+        <AppContentCode type='js'>
+          {'var date = new Date(99,1,24)\n>> 1999-2-24'}
+        </AppContentCode>
+        <AppHeader level={3} text='Usando una cadena de texto' />
+        <p>
+          JavaScript, intentará reconocer la cadena de texto mediante
+          estructuras de fechas estándares
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var date = new Date("October 13, 2014 11:13:00")\n>> Mon Oct 13 2014 11:13:00 GMT-0430 (hora de Venezuela)'
+          }
+        </AppContentCode>
+        <AppHeader level={3} text='Usando los milisegundos' />
+        <p>
+          Al especificar en el constructor los milisegundos, la fecha comienza a
+          sumarse a la básica que es el 31 de diciembre de 1969 a las 8 pm{' '}
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var d = new Date(0)\n>> Wed Dec 31 1969 20:00:00 GMT-0400 (hora de Venezuela)\n'
+          }
+        </AppContentCode>
+        <AppHeader level={3} text='Método toString' />
+        <p>
+          Como la mayoría de los tipos de datos en JavaScript, las fechas
+          también poseen el método <strong>toString</strong>. Lo que realiza
+          este método es entregar la fecha en forma de texto
+        </p>
+        <AppHeader level={3} text='Método toUTCString y toDateString' />
+        <p>
+          Este método, transforma la fecha en texto de formato UTC, el cual es
+          un estándar para la presentación de las fechas
+        </p>
+        <p>
+          El método <strong>toDateString</strong> transforma la fecha a una
+          cadena de texto más legible
+        </p>
+        <AppHeader level={3} text='Formatos de las fechas' />
+        <p>JavaScript posee tres estándares para las fechas</p>
+        <ul>
+          <li>
+            ISO: <q>2015-03-25</q>
+          </li>
+          <li>
+            Fecha corta: <q>03/25/2015</q>
+          </li>
+          <li>
+            Fecha larga: <q>Mar 25 2015</q> o <q>25 Mar 2015</q>
+          </li>
+        </ul>
+        <AppHeader level={3} text='Parser (Conversor)' />
+        <p>
+          Si posees un texto que represente una fecha válida, puedes obtener los
+          milisegundos correspondientes usando el método <strong>parse</strong>
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var milisec = Date.parse("Jan 1, 2015")\nnew Date(milisec)\n>> Thu Jan 01 2015 00:00:00 GMT-0430 (hora de Venezuela)'
+          }
+        </AppContentCode>
+        <AppHeader
+          level={3}
+          text='Métodos para obtener información de la fecha'
+        />
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
       </AppContentTheory>
     </AppContentStructure>
   )
