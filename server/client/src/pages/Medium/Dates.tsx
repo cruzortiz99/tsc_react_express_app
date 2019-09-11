@@ -4,8 +4,31 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 import AppHeader from '../../components/AppHeader/AppHeader'
-
+interface GetMethodsType {
+  [name: string]: string
+}
 const DatesC = (props: AppPagesProps) => {
+  const getMethods: GetMethodsType = {
+    getFullYear: 'Obtienes el año de la fecha en cuatro dígitos(yyyy)',
+    getMonth: 'Obtienes el número del mes (0-11)',
+    getDate: 'Obtienes el dia como un número (1-31)',
+    getHours: 'Obtienes las horas (0-23)',
+    getMinutes: 'Obtienes los minutos (0-59)',
+    getSeconds: 'Obtienes los segundos (0-59)',
+    getMilliseconds: 'Obtienes los milisegundos (0-999)',
+    getTime: 'Obtienes la fecha en milisegundos desde 1 de Enero de 1970',
+    getDay: 'Obtienes el dia de la semana (0-6)',
+    'Date.now': 'Obtienes la fecha actual'
+  }
+  const getMethodTable = []
+  for (const key in getMethods) {
+    getMethodTable.push(
+      <tr key={key}>
+        <td>{key}()</td>
+        <td>{getMethods[key]}</td>
+      </tr>
+    )
+  }
   return (
     <AppContentStructure title='Fechas' {...props}>
       <AppContentTheory>
@@ -106,12 +129,7 @@ const DatesC = (props: AppPagesProps) => {
               <th>Descripción</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>getFullYear()</td>
-              <td>Obtienes el año de la fecha en cuatro dígitos(yyyy)</td>
-            </tr>
-          </tbody>
+          <tbody>{getMethodTable}</tbody>
         </table>
       </AppContentTheory>
     </AppContentStructure>
