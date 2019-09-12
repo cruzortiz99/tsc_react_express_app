@@ -4,31 +4,44 @@ import AppContentStructure from '../../components/AppContentStructure/AppContent
 import AppContentTheory from '../../components/AppContentTheory/AppContentTheory'
 import AppContentCode from '../../components/AppContentCode/AppContentCode'
 import AppHeader from '../../components/AppHeader/AppHeader'
-interface GetMethodsType {
+interface MethodsType {
   [name: string]: string
 }
-const DatesC = (props: AppPagesProps) => {
-  const getMethods: GetMethodsType = {
-    getFullYear: 'Obtienes el año de la fecha en cuatro dígitos(yyyy)',
-    getMonth: 'Obtienes el número del mes (0-11)',
-    getDate: 'Obtienes el dia como un número (1-31)',
-    getHours: 'Obtienes las horas (0-23)',
-    getMinutes: 'Obtienes los minutos (0-59)',
-    getSeconds: 'Obtienes los segundos (0-59)',
-    getMilliseconds: 'Obtienes los milisegundos (0-999)',
-    getTime: 'Obtienes la fecha en milisegundos desde 1 de Enero de 1970',
-    getDay: 'Obtienes el dia de la semana (0-6)',
-    'Date.now': 'Obtienes la fecha actual'
-  }
-  const getMethodTable = []
-  for (const key in getMethods) {
-    getMethodTable.push(
+const getMethods: MethodsType = {
+  getFullYear: 'Obtienes el año de la fecha en cuatro dígitos(yyyy)',
+  getMonth: 'Obtienes el número del mes (0-11)',
+  getDate: 'Obtienes el dia como un número (1-31)',
+  getHours: 'Obtienes las horas (0-23)',
+  getMinutes: 'Obtienes los minutos (0-59)',
+  getSeconds: 'Obtienes los segundos (0-59)',
+  getMilliseconds: 'Obtienes los milisegundos (0-999)',
+  getTime: 'Obtienes la fecha en milisegundos desde 1 de Enero de 1970',
+  getDay: 'Obtienes el dia de la semana (0-6)',
+  'Date.now': 'Obtienes la fecha actual'
+}
+const setMethods: MethodsType = {
+  setDate: 'Establece el dia como un número (1-31)',
+  setFullYear: 'Establece el año (mes y dia opcional)',
+  setHours: 'Establece la hora (0-23)',
+  setMilliseconds: 'Establece los milisegundos (0-999)',
+  setMinutes: 'Establece los minutos (0-59)',
+  setMonth: 'Establece el mes (0-11)',
+  setSeconds: 'Establece los segundos (0-59)',
+  setTime: 'Establece la fecha (milisegundos desde 1ero de Enero de 1970)'
+}
+const getTableDataOfMethods = (methods: MethodsType) => {
+  const methodTable = []
+  for (const key in methods) {
+    methodTable.push(
       <tr key={key}>
         <td>{key}()</td>
-        <td>{getMethods[key]}</td>
+        <td>{methods[key]}</td>
       </tr>
     )
   }
+  return methodTable
+}
+const DatesC = (props: AppPagesProps) => {
   return (
     <AppContentStructure title='Fechas' {...props}>
       <AppContentTheory>
@@ -129,7 +142,20 @@ const DatesC = (props: AppPagesProps) => {
               <th>Descripción</th>
             </tr>
           </thead>
-          <tbody>{getMethodTable}</tbody>
+          <tbody>{getTableDataOfMethods(getMethods)}</tbody>
+        </table>
+        <AppHeader
+          level={3}
+          text='Métodos para establecer valores de las fechas'
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>Métodos</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>{getTableDataOfMethods(setMethods)}</tbody>
         </table>
       </AppContentTheory>
     </AppContentStructure>
