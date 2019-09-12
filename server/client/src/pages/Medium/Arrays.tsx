@@ -89,17 +89,84 @@ const Arrays = (props: AppPagesProps) => {
           {'var x = [1, 2, 3];\nx instanceof Array;\n>> true'}
         </AppContentCode>
         <AppHeader level={3} text='Método toString'></AppHeader>
+        <AppContentCode type='js'>
+          {'var x = [1,2,3];\nconsole.log(x.toString())\n>> "1,2,3"'}
+        </AppContentCode>
         <AppHeader level={3} text='Método pop y push'></AppHeader>
+        <p>
+          Al momento de modificar un arreglo en cualquier lenguaje, es
+          importante conocer los métodos push y pop que se utilizan para añadir
+          o retirar elementos a un arreglo al final del arreglo
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [1,2,3];\nx.push(4);// [1,2,3,4]\nconsole.log(x.pop());// 4'
+          }
+        </AppContentCode>
         <AppHeader level={3} text='Método shift y unshift'></AppHeader>
+        <p>
+          Estos métodos son muy parecidos a <strong>pop y push</strong>, la
+          diferencia principal es que el elemento que añade o remueve es al
+          inicio del arreglo
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [2,3,4];\nx.unshift(1);// [1,2,3,4]\nconsole.log(x.shift());\n>> 1'
+          }
+        </AppContentCode>
         <AppHeader level={3} text='Método splice y concat'></AppHeader>
+        <p>
+          El método <strong>splice</strong> permite remover y agregar elementos
+          a un arreglo con el mismo método
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [1,2,3];// splice(index, noElementosARemover, ...elementosAAgregar\nx.splice(1,0,1.5); // [1,1.5,2,3]\nx.splice(0,1); // [1.5, 2, 3]'
+          }
+        </AppContentCode>
+        <p>
+          El método <strong>concat</strong>, permite unir o mezclar dos arreglos
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [1,2];// concat(...arreglosAUnir)\nvar y = [3,4]\nx.concat(y);// [1,2,3,4]'
+          }
+        </AppContentCode>
         <AppHeader level={3} text='Método slice y join'></AppHeader>
+        <p>
+          El método <strong>slice</strong> permite copiar una sección del
+          arreglo, sin modificar el original. El método <strong>join</strong>
+          permite obtener una cadena de texto uniendo cada elemento en el
+          arreglo y opcionalmente algún separador específico
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [1,2,3];// slice(start, end)\nvar y = x.slice(0,1);// [1,2]\nconsole.log(y.join("-"))\n>> "1-2"'
+          }
+        </AppContentCode>
         <AppHeader level={3} text='Método sort y reverse'></AppHeader>
+        <p>
+          El método <strong>sort</strong> permite ordenar los arreglos, para el
+          caso de los arreglos de cadenas de textos, el método por defecto es
+          todo lo que necesitas, sin embargo, para números o si quieres cambiar
+          el algoritmo de ordenamiento, esto se puede realizar de una manera muy
+          sencilla, pasándole la función de ordenamiento al método
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var alf = ["C","B","A"]\nalf.sort(); // ordenado por defecto ["A","B","C"]\nvar nums = [3,2,1]\nnums.sort((current, next) => current - next);// [1,2,3]'
+          }
+        </AppContentCode>
         <AppHeader level={3} text='Método map, filter y reduce'></AppHeader>
         <AppHeader level={3} text='Método every, some'></AppHeader>
         <AppHeader
           level={3}
           text='Método indexOf, lastIndexOf, find, findIndex'
         ></AppHeader>
+        <p>
+          Así como en las cadenas de textos, estos métodos sirven para ubicar un
+          elemento dentro del arreglo{' '}
+        </p>
       </AppContentTheory>
     </AppContentStructure>
   )
