@@ -35,7 +35,7 @@ const Arrays = (props: AppPagesProps) => {
           Como cualquier elemento en JavaScript, los arreglos también provienen
           de la clase objectos
         </p>
-        <AppHeader level={3} text='Longitud del arreglo'></AppHeader>
+        <AppHeader level={3} text='Longitud del arreglo' />
         <p>
           Los arreglos, en JavaScript proveen mucha información y métodos que se
           pueden usar. a longitud es uno de los datos que podemos obtener del
@@ -44,7 +44,7 @@ const Arrays = (props: AppPagesProps) => {
         <AppContentCode type='js'>
           {'var x = [1,2,3,4];\nconsole.log(x.length);\n>> 4'}
         </AppContentCode>
-        <AppHeader level={3} text='Recorrer el arreglo'></AppHeader>
+        <AppHeader level={3} text='Recorrer el arreglo' />
         <p>
           Recorrer un arreglo se puede realizar a través de las funciones o
           flujos de trabajos vistos en el básico (fors, while y funciones
@@ -58,7 +58,7 @@ const Arrays = (props: AppPagesProps) => {
             'var x = [1, 2, 3, 4];\nx.foreach((item, key, array)=>{\n  console.log(item, key, array);\n})\n// Intentalo!'
           }
         </AppContentCode>
-        <AppHeader level={3} text='Agregar elemento al arreglo'></AppHeader>
+        <AppHeader level={3} text='Agregar elemento al arreglo' />
         <p>
           Agregar elementos en JavaScript es bastante simple, hay dos maneras de
           hacerlo, sin embargo, mi recomendación es siempre usar el método del
@@ -69,7 +69,7 @@ const Arrays = (props: AppPagesProps) => {
             'var x = [1, 2, 3, 4];\nx[x.length] = 5;// [1, 2, 3, 4, 5]\nx.push(6);// [1, 2, 3, 4, 5, 6]'
           }
         </AppContentCode>
-        <AppHeader level={3} text='Reconocer un arreglo'></AppHeader>
+        <AppHeader level={3} text='Reconocer un arreglo' />
         <p>
           Reconocer un arreglo en JavaScript es algo curioso ya que usar{' '}
           <strong>typeof</strong> sobre un arreglo, en realidad se obtiene un{' '}
@@ -88,11 +88,11 @@ const Arrays = (props: AppPagesProps) => {
         <AppContentCode type='js'>
           {'var x = [1, 2, 3];\nx instanceof Array;\n>> true'}
         </AppContentCode>
-        <AppHeader level={3} text='Método toString'></AppHeader>
+        <AppHeader level={3} text='Método toString' />
         <AppContentCode type='js'>
           {'var x = [1,2,3];\nconsole.log(x.toString())\n>> "1,2,3"'}
         </AppContentCode>
-        <AppHeader level={3} text='Método pop y push'></AppHeader>
+        <AppHeader level={3} text='Método pop y push' />
         <p>
           Al momento de modificar un arreglo en cualquier lenguaje, es
           importante conocer los métodos push y pop que se utilizan para añadir
@@ -103,7 +103,7 @@ const Arrays = (props: AppPagesProps) => {
             'var x = [1,2,3];\nx.push(4);// [1,2,3,4]\nconsole.log(x.pop());// 4'
           }
         </AppContentCode>
-        <AppHeader level={3} text='Método shift y unshift'></AppHeader>
+        <AppHeader level={3} text='Método shift y unshift' />
         <p>
           Estos métodos son muy parecidos a <strong>pop y push</strong>, la
           diferencia principal es que el elemento que añade o remueve es al
@@ -114,7 +114,7 @@ const Arrays = (props: AppPagesProps) => {
             'var x = [2,3,4];\nx.unshift(1);// [1,2,3,4]\nconsole.log(x.shift());\n>> 1'
           }
         </AppContentCode>
-        <AppHeader level={3} text='Método splice y concat'></AppHeader>
+        <AppHeader level={3} text='Método splice y concat' />
         <p>
           El método <strong>splice</strong> permite remover y agregar elementos
           a un arreglo con el mismo método
@@ -132,7 +132,7 @@ const Arrays = (props: AppPagesProps) => {
             'var x = [1,2];// concat(...arreglosAUnir)\nvar y = [3,4]\nx.concat(y);// [1,2,3,4]'
           }
         </AppContentCode>
-        <AppHeader level={3} text='Método slice y join'></AppHeader>
+        <AppHeader level={3} text='Método slice y join' />
         <p>
           El método <strong>slice</strong> permite copiar una sección del
           arreglo, sin modificar el original. El método <strong>join</strong>
@@ -144,7 +144,7 @@ const Arrays = (props: AppPagesProps) => {
             'var x = [1,2,3];// slice(start, end)\nvar y = x.slice(0,1);// [1,2]\nconsole.log(y.join("-"))\n>> "1-2"'
           }
         </AppContentCode>
-        <AppHeader level={3} text='Método sort y reverse'></AppHeader>
+        <AppHeader level={3} text='Método sort y reverse' />
         <p>
           El método <strong>sort</strong> permite ordenar los arreglos, para el
           caso de los arreglos de cadenas de textos, el método por defecto es
@@ -157,12 +157,12 @@ const Arrays = (props: AppPagesProps) => {
             'var alf = ["C","B","A"]\nalf.sort(); // ordenado por defecto ["A","B","C"]\nvar nums = [3,2,1]\nnums.sort((current, next) => current - next);// [1,2,3]'
           }
         </AppContentCode>
-        <AppHeader level={3} text='Método map, filter y reduce'></AppHeader>
-        <AppHeader level={3} text='Método every, some'></AppHeader>
+        <AppHeader level={3} text='Método map, filter y reduce' />
+        <AppHeader level={3} text='Método every, some' />
         <AppHeader
           level={3}
           text='Método indexOf, lastIndexOf, find, findIndex'
-        ></AppHeader>
+        />
         <p>
           Así como en las cadenas de textos, estos métodos sirven para ubicar un
           elemento dentro del arreglo{' '}

@@ -197,10 +197,12 @@ Typescript React Express FullStack App
     "indent": "off",
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
-    "no-console": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
+    "no-console": "warn",
     "react/display-name": "off",
-    "prettier/prettier": "error"
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/self-closing-comp": ["warn", { "component": true, "html": false }]
   },
   "settings": {
     "react": {

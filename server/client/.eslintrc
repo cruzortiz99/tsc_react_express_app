@@ -23,7 +23,8 @@
     "react/display-name": "off",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/member-delimiter-style": "off",
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/self-closing-comp": ["warn", { "component": true, "html": false }]
   },
   "settings": {
     "react": {

@@ -219,7 +219,7 @@ export default [
             nextRoute='/intermedio/dates'
             prevRoute='/intermedio'
             {...props}
-          ></Strings>
+          />
         )
       },
       {
