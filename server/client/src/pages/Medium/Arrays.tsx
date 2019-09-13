@@ -158,7 +158,60 @@ const Arrays = (props: AppPagesProps) => {
           }
         </AppContentCode>
         <AppHeader level={3} text='Método map, filter y reduce' />
+        <p>
+          El método <strong>map</strong>, es un método particular que permite
+          obtener un nuevo arreglo a partir de un arreglo anterior. ¿Pero como
+          funciona?, bueno permite transformar cada elemento del arreglo usado
+          como base
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [1,2,3]; // map((item, index, array) => newItem)\nvar y = x.map((item) => item + "y");// ["1y","2y","3y"]'
+          }
+        </AppContentCode>
+        <p>
+          El método <strong>filter</strong>, es un método que también permite
+          obtener un nuevo arreglo a partir de un arreglo anterior. ¿Pero como
+          funciona? ¿No es lo mismo que map?, como su nombre lo dice, filtra el
+          arreglo anterior y devuelve un nuevo arreglo solo con los elementos
+          que cumplen la condición que le expresamos, a diferencia de <i>map</i>{' '}
+          que retorna un arreglo del mismo tamaño que el original, este método
+          siempre retorna del mismo tamaño o menor
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [1,2,3,4]; // filter((item, key, array) => condition)\nvar y = x.filter((item) => !(item % 2)); // [2,4]'
+          }
+        </AppContentCode>
+        <p>
+          Le método <strong>reduce</strong>, es un método que a diferencia de
+          los anteriores no retorna un arreglo, sino un valor que representa el
+          resultado de una operación sobre todo el arreglo
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [1,2,3]; // reduce((total, item, index, array) => operation)\nvar y = x.reduce((total, index) => total + index); // 6'
+          }
+        </AppContentCode>
+        <p>
+          Una variación al método <i>reduce</i> es <strong>reduceRight</strong>,
+          el cual se diferencia por la dirección en la que recorre el arreglo
+          original. El primero va desde el indice 0 hasta el ultimo mientras que{' '}
+          <strong>reduceRight</strong> va del indice mayor a 0
+        </p>
         <AppHeader level={3} text='Método every, some' />
+        <p>
+          El método <strong>every</strong> es un método que retorna verdadero o
+          falso, si todos los elementos en el arreglo cumplen o no una
+          condición. Por otra parte el método <strong>some</strong> retorna
+          verdadero o falso, si alguno de los elementos en el arreglo cumple o
+          no una condición
+        </p>
+        <AppContentCode type='js'>
+          {
+            'var x = [1,2,3,4]; // every((item, key, array)=>condición)\nvar y = x.every(item => item > 2);// false\n// some((item,key,array)=>condición)\nvar z = x.some(item => item < 2); // true'
+          }
+        </AppContentCode>
         <AppHeader
           level={3}
           text='Método indexOf, lastIndexOf, find, findIndex'
