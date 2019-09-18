@@ -18,7 +18,14 @@ import {
   SwitchCases,
   WhileLoops
 } from '../pages/Basics/index'
-import { Medium, Strings, DatesC, Arrays, Objects } from '../pages/Medium/index'
+import {
+  Medium,
+  Strings,
+  DatesC,
+  Arrays,
+  Objects,
+  JsonC
+} from '../pages/Medium/index'
 import { Advance } from '../pages/Advance/index'
 import MathC from '../pages/Medium/Math'
 export default [
@@ -279,7 +286,13 @@ export default [
       {
         path: '/intermedio/json',
         name: 'json',
-        component: () => <h1>Json</h1>
+        component: (props: AppPagesProps) => (
+          <JsonC
+            prevRoute='/intermedio/events'
+            nextRoute='/intermedio/prototypes'
+            {...props}
+          />
+        )
       },
       {
         path: '/intermedio/prototypes',
