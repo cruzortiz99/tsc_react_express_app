@@ -225,4 +225,4 @@ const Arrays = (props: AppPagesProps) => {
   )
 }
 
-export default Arrays
+export default React.memo(Arrays)

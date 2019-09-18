@@ -29,4 +29,4 @@ const Medium = (props: AppPagesProps) => {
   )
 }
 
-export default Medium
+export default React.memo(Medium)

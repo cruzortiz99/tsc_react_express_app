@@ -162,4 +162,4 @@ const DatesC = (props: AppPagesProps) => {
   )
 }
 
-export default DatesC
+export default React.memo(DatesC)

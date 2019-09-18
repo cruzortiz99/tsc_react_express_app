@@ -92,4 +92,4 @@ car.retroceder();
   )
 }
 
-export default Objects
+export default React.memo(Objects)

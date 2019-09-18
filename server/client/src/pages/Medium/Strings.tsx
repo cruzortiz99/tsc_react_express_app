@@ -123,4 +123,4 @@ const Strings = (props: AppPagesProps) => {
   )
 }
 
-export default Strings
+export default React.memo(Strings)
